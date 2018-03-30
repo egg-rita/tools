@@ -13,6 +13,10 @@
 		003119A6206CC4A400D5FC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003119A5206CC4A400D5FC58 /* Assets.xcassets */; };
 		003119A9206CC4A400D5FC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003119A7206CC4A400D5FC58 /* LaunchScreen.storyboard */; };
 		003119AC206CC4A400D5FC58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119AB206CC4A400D5FC58 /* main.m */; };
+		003119B4206CC51200D5FC58 /* UIControl+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119B3206CC51200D5FC58 /* UIControl+Category.m */; };
+		003119BA206CDF5B00D5FC58 /* UIButton+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119B9206CDF5B00D5FC58 /* UIButton+Layout.m */; };
+		003119BD206CE28700D5FC58 /* icon-service@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 003119BB206CE28700D5FC58 /* icon-service@2x.png */; };
+		003119BE206CE28700D5FC58 /* icon-service@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 003119BC206CE28700D5FC58 /* icon-service@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		003119A8206CC4A400D5FC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		003119AA206CC4A400D5FC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003119AB206CC4A400D5FC58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		003119B2206CC51200D5FC58 /* UIControl+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Category.h"; sourceTree = "<group>"; };
+		003119B3206CC51200D5FC58 /* UIControl+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Category.m"; sourceTree = "<group>"; };
+		003119B8206CDF5B00D5FC58 /* UIButton+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Layout.h"; sourceTree = "<group>"; };
+		003119B9206CDF5B00D5FC58 /* UIButton+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Layout.m"; sourceTree = "<group>"; };
+		003119BB206CE28700D5FC58 /* icon-service@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-service@2x.png"; sourceTree = "<group>"; };
+		003119BC206CE28700D5FC58 /* icon-service@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-service@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +68,16 @@
 		0031199B206CC4A400D5FC58 /* ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				003119BB206CE28700D5FC58 /* icon-service@2x.png */,
+				003119BC206CE28700D5FC58 /* icon-service@3x.png */,
 				0031199C206CC4A400D5FC58 /* AppDelegate.h */,
 				0031199D206CC4A400D5FC58 /* AppDelegate.m */,
 				0031199F206CC4A400D5FC58 /* ViewController.h */,
 				003119A0206CC4A400D5FC58 /* ViewController.m */,
+				003119B2206CC51200D5FC58 /* UIControl+Category.h */,
+				003119B3206CC51200D5FC58 /* UIControl+Category.m */,
+				003119B8206CDF5B00D5FC58 /* UIButton+Layout.h */,
+				003119B9206CDF5B00D5FC58 /* UIButton+Layout.m */,
 				003119A2206CC4A400D5FC58 /* Main.storyboard */,
 				003119A5206CC4A400D5FC58 /* Assets.xcassets */,
 				003119A7206CC4A400D5FC58 /* LaunchScreen.storyboard */,
@@ -131,7 +147,9 @@
 			files = (
 				003119A9206CC4A400D5FC58 /* LaunchScreen.storyboard in Resources */,
 				003119A6206CC4A400D5FC58 /* Assets.xcassets in Resources */,
+				003119BE206CE28700D5FC58 /* icon-service@3x.png in Resources */,
 				003119A4206CC4A400D5FC58 /* Main.storyboard in Resources */,
+				003119BD206CE28700D5FC58 /* icon-service@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +163,8 @@
 				003119A1206CC4A400D5FC58 /* ViewController.m in Sources */,
 				003119AC206CC4A400D5FC58 /* main.m in Sources */,
 				0031199E206CC4A400D5FC58 /* AppDelegate.m in Sources */,
+				003119BA206CDF5B00D5FC58 /* UIButton+Layout.m in Sources */,
+				003119B4206CC51200D5FC58 /* UIControl+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

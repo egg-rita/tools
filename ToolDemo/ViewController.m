@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "UIControl+Category.h"
+#import "UIButton+Layout.h"
 @interface ViewController ()
 
 @end
@@ -16,9 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    btn.frame = CGRectMake(20, 20, 200, 50);
+    btn.backgroundColor = [UIColor orangeColor];
+    btn.custom_acceptEventInterval = 2.0;
+    
+    [btn addTarget:self action:@selector(btnaction) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:btn];
+    
+    for (int i = 0; i<9; i++) {
+        
+        UIButton *testbtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [testbtn setImage:[UIImage imageNamed:@"icon-service"] forState:(UIControlStateNormal)];
+        [testbtn setTitle:@"测试文字" forState:UIControlStateNormal];
+        [testbtn KL_LayoutButtonWithEdgeInsetsStyle:(KLButtonEdgeInsetsStyleTop) andSpace:0];
+    }
+    
+    
+    
 }
-
+-(void)btnaction{
+    
+    NSLog(@"asdfadf");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
