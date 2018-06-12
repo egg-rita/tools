@@ -10,6 +10,23 @@
 
 @interface UIView (KLLayer)
 
+@property(nonatomic,assign)CGFloat kl_x;
+@property(nonatomic,assign)CGFloat kl_y;
+@property(nonatomic,assign)CGFloat kl_width;
+@property(nonatomic,assign)CGFloat kl_height;
+@property(nonatomic,assign)CGSize  kl_size;
+@property(nonatomic,assign)CGPoint kl_point;
+/**
+ 中心点需要在view的size之后使用
+ */
+@property(nonatomic,assign)CGPoint kl_center;
+@property(nonatomic,assign)CGFloat kl_centerX;
+@property(nonatomic,assign)CGFloat kl_centerY;
+
+@property(nonatomic,assign,readonly)CGFloat kl_maxX;
+@property(nonatomic,assign,readonly)CGFloat kl_maxY;
+
+#pragma mark - 边框 、 描边
 /**
  系统画框的方法
  */

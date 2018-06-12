@@ -17,9 +17,28 @@
 		003119BA206CDF5B00D5FC58 /* UIButton+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119B9206CDF5B00D5FC58 /* UIButton+Layout.m */; };
 		003119BD206CE28700D5FC58 /* icon-service@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 003119BB206CE28700D5FC58 /* icon-service@2x.png */; };
 		003119BE206CE28700D5FC58 /* icon-service@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 003119BC206CE28700D5FC58 /* icon-service@3x.png */; };
+		00545E6520CE54C900064686 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 00545E6320CE54C900064686 /* UIImage+Category.m */; };
+		00545E6720CE569800064686 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00545E6620CE569700064686 /* 01.jpg */; };
 		0066D03820C5467F00EBD1A9 /* UIView+KLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03620C5467F00EBD1A9 /* UIView+KLLayer.m */; };
 		0066D03D20C54DAC00EBD1A9 /* KLAdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03920C54DAC00EBD1A9 /* KLAdvertView.m */; };
 		0066D03E20C54DAC00EBD1A9 /* LL_AdvertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */; };
+		00AC757A20CA23A30000C2B0 /* KLBrowerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC757920CA23A30000C2B0 /* KLBrowerTestViewController.m */; };
+		00AC758620CA25140000C2B0 /* localBigImage0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757C20CA25140000C2B0 /* localBigImage0.jpeg */; };
+		00AC758720CA25140000C2B0 /* localImage1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757D20CA25140000C2B0 /* localImage1.jpeg */; };
+		00AC758820CA25140000C2B0 /* localImage0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757E20CA25140000C2B0 /* localImage0.jpeg */; };
+		00AC758920CA25140000C2B0 /* localImage7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757F20CA25140000C2B0 /* localImage7.jpeg */; };
+		00AC758A20CA25140000C2B0 /* localImage6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758020CA25140000C2B0 /* localImage6.jpeg */; };
+		00AC758B20CA25140000C2B0 /* localImage5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758120CA25140000C2B0 /* localImage5.jpeg */; };
+		00AC758C20CA25140000C2B0 /* localImage4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758220CA25140000C2B0 /* localImage4.jpeg */; };
+		00AC758D20CA25140000C2B0 /* localImage8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758320CA25140000C2B0 /* localImage8.jpeg */; };
+		00AC758E20CA25140000C2B0 /* localImage3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758420CA25140000C2B0 /* localImage3.jpeg */; };
+		00AC758F20CA25140000C2B0 /* localImage2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758520CA25140000C2B0 /* localImage2.jpeg */; };
+		00AC759320CA31570000C2B0 /* KLImageBrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759220CA31570000C2B0 /* KLImageBrowserVC.m */; };
+		00AC759620CA37B80000C2B0 /* KLImageBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759520CA37B80000C2B0 /* KLImageBrowserModel.m */; };
+		00AC759920CA38580000C2B0 /* KLImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759820CA38580000C2B0 /* KLImageBrowserView.m */; };
+		00AC759C20CA586A0000C2B0 /* KLImageBrowserDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759B20CA586A0000C2B0 /* KLImageBrowserDownloader.m */; };
+		00AC759F20CA61220000C2B0 /* KLImageBrowserUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759E20CA61220000C2B0 /* KLImageBrowserUtilities.m */; };
+		B695C5DA2C2CDC2351C65917 /* libPods-ToolDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2080334BA0FF7607229973 /* libPods-ToolDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,12 +58,40 @@
 		003119B9206CDF5B00D5FC58 /* UIButton+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Layout.m"; sourceTree = "<group>"; };
 		003119BB206CE28700D5FC58 /* icon-service@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-service@2x.png"; sourceTree = "<group>"; };
 		003119BC206CE28700D5FC58 /* icon-service@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-service@3x.png"; sourceTree = "<group>"; };
+		00545E6320CE54C900064686 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
+		00545E6420CE54C900064686 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		00545E6620CE569700064686 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
 		0066D03620C5467F00EBD1A9 /* UIView+KLLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KLLayer.m"; sourceTree = "<group>"; };
 		0066D03720C5467F00EBD1A9 /* UIView+KLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KLLayer.h"; sourceTree = "<group>"; };
 		0066D03920C54DAC00EBD1A9 /* KLAdvertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLAdvertView.m; sourceTree = "<group>"; };
 		0066D03A20C54DAC00EBD1A9 /* KLAdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLAdvertView.h; sourceTree = "<group>"; };
 		0066D03B20C54DAC00EBD1A9 /* LL_AdvertScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LL_AdvertScrollView.h; sourceTree = "<group>"; };
 		0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LL_AdvertScrollView.m; sourceTree = "<group>"; };
+		00AC757820CA23A30000C2B0 /* KLBrowerTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBrowerTestViewController.h; sourceTree = "<group>"; };
+		00AC757920CA23A30000C2B0 /* KLBrowerTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLBrowerTestViewController.m; sourceTree = "<group>"; };
+		00AC757C20CA25140000C2B0 /* localBigImage0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localBigImage0.jpeg; sourceTree = "<group>"; };
+		00AC757D20CA25140000C2B0 /* localImage1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage1.jpeg; sourceTree = "<group>"; };
+		00AC757E20CA25140000C2B0 /* localImage0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage0.jpeg; sourceTree = "<group>"; };
+		00AC757F20CA25140000C2B0 /* localImage7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage7.jpeg; sourceTree = "<group>"; };
+		00AC758020CA25140000C2B0 /* localImage6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage6.jpeg; sourceTree = "<group>"; };
+		00AC758120CA25140000C2B0 /* localImage5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage5.jpeg; sourceTree = "<group>"; };
+		00AC758220CA25140000C2B0 /* localImage4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage4.jpeg; sourceTree = "<group>"; };
+		00AC758320CA25140000C2B0 /* localImage8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage8.jpeg; sourceTree = "<group>"; };
+		00AC758420CA25140000C2B0 /* localImage3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage3.jpeg; sourceTree = "<group>"; };
+		00AC758520CA25140000C2B0 /* localImage2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage2.jpeg; sourceTree = "<group>"; };
+		00AC759120CA31570000C2B0 /* KLImageBrowserVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserVC.h; sourceTree = "<group>"; };
+		00AC759220CA31570000C2B0 /* KLImageBrowserVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserVC.m; sourceTree = "<group>"; };
+		00AC759420CA37B80000C2B0 /* KLImageBrowserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserModel.h; sourceTree = "<group>"; };
+		00AC759520CA37B80000C2B0 /* KLImageBrowserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserModel.m; sourceTree = "<group>"; };
+		00AC759720CA38580000C2B0 /* KLImageBrowserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserView.h; sourceTree = "<group>"; };
+		00AC759820CA38580000C2B0 /* KLImageBrowserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserView.m; sourceTree = "<group>"; };
+		00AC759A20CA586A0000C2B0 /* KLImageBrowserDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserDownloader.h; sourceTree = "<group>"; };
+		00AC759B20CA586A0000C2B0 /* KLImageBrowserDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserDownloader.m; sourceTree = "<group>"; };
+		00AC759D20CA61220000C2B0 /* KLImageBrowserUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserUtilities.h; sourceTree = "<group>"; };
+		00AC759E20CA61220000C2B0 /* KLImageBrowserUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserUtilities.m; sourceTree = "<group>"; };
+		5BD7D31BFCAD4BE79A5FC57F /* Pods-ToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolDemo/Pods-ToolDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CF2080334BA0FF7607229973 /* libPods-ToolDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToolDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACA40E76ECA94BDFD397464 /* Pods-ToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolDemo/Pods-ToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B695C5DA2C2CDC2351C65917 /* libPods-ToolDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +111,8 @@
 			children = (
 				0031199B206CC4A400D5FC58 /* ToolDemo */,
 				0031199A206CC4A400D5FC58 /* Products */,
+				08B35164274769DCD689297A /* Pods */,
+				D63ABB344F002F797A424814 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +127,7 @@
 		0031199B206CC4A400D5FC58 /* ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				00545E6620CE569700064686 /* 01.jpg */,
 				003119BB206CE28700D5FC58 /* icon-service@2x.png */,
 				003119BC206CE28700D5FC58 /* icon-service@3x.png */,
 				0031199C206CC4A400D5FC58 /* AppDelegate.h */,
@@ -93,13 +144,70 @@
 				0066D03920C54DAC00EBD1A9 /* KLAdvertView.m */,
 				0066D03B20C54DAC00EBD1A9 /* LL_AdvertScrollView.h */,
 				0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */,
+				00545E6420CE54C900064686 /* UIImage+Category.h */,
+				00545E6320CE54C900064686 /* UIImage+Category.m */,
+				00AC759020CA313F0000C2B0 /* KLImageBrower */,
+				00AC757820CA23A30000C2B0 /* KLBrowerTestViewController.h */,
+				00AC757920CA23A30000C2B0 /* KLBrowerTestViewController.m */,
 				003119A2206CC4A400D5FC58 /* Main.storyboard */,
 				003119A5206CC4A400D5FC58 /* Assets.xcassets */,
 				003119A7206CC4A400D5FC58 /* LaunchScreen.storyboard */,
 				003119AA206CC4A400D5FC58 /* Info.plist */,
 				003119AB206CC4A400D5FC58 /* main.m */,
+				00AC757B20CA25140000C2B0 /* LocalImages */,
 			);
 			path = ToolDemo;
+			sourceTree = "<group>";
+		};
+		00AC757B20CA25140000C2B0 /* LocalImages */ = {
+			isa = PBXGroup;
+			children = (
+				00AC757C20CA25140000C2B0 /* localBigImage0.jpeg */,
+				00AC757D20CA25140000C2B0 /* localImage1.jpeg */,
+				00AC757E20CA25140000C2B0 /* localImage0.jpeg */,
+				00AC757F20CA25140000C2B0 /* localImage7.jpeg */,
+				00AC758020CA25140000C2B0 /* localImage6.jpeg */,
+				00AC758120CA25140000C2B0 /* localImage5.jpeg */,
+				00AC758220CA25140000C2B0 /* localImage4.jpeg */,
+				00AC758320CA25140000C2B0 /* localImage8.jpeg */,
+				00AC758420CA25140000C2B0 /* localImage3.jpeg */,
+				00AC758520CA25140000C2B0 /* localImage2.jpeg */,
+			);
+			path = LocalImages;
+			sourceTree = "<group>";
+		};
+		00AC759020CA313F0000C2B0 /* KLImageBrower */ = {
+			isa = PBXGroup;
+			children = (
+				00AC759A20CA586A0000C2B0 /* KLImageBrowserDownloader.h */,
+				00AC759B20CA586A0000C2B0 /* KLImageBrowserDownloader.m */,
+				00AC759D20CA61220000C2B0 /* KLImageBrowserUtilities.h */,
+				00AC759E20CA61220000C2B0 /* KLImageBrowserUtilities.m */,
+				00AC759420CA37B80000C2B0 /* KLImageBrowserModel.h */,
+				00AC759520CA37B80000C2B0 /* KLImageBrowserModel.m */,
+				00AC759720CA38580000C2B0 /* KLImageBrowserView.h */,
+				00AC759820CA38580000C2B0 /* KLImageBrowserView.m */,
+				00AC759120CA31570000C2B0 /* KLImageBrowserVC.h */,
+				00AC759220CA31570000C2B0 /* KLImageBrowserVC.m */,
+			);
+			path = KLImageBrower;
+			sourceTree = "<group>";
+		};
+		08B35164274769DCD689297A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DACA40E76ECA94BDFD397464 /* Pods-ToolDemo.debug.xcconfig */,
+				5BD7D31BFCAD4BE79A5FC57F /* Pods-ToolDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D63ABB344F002F797A424814 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF2080334BA0FF7607229973 /* libPods-ToolDemo.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 003119AF206CC4A400D5FC58 /* Build configuration list for PBXNativeTarget "ToolDemo" */;
 			buildPhases = (
+				905332F57A09F1214FA58D6F /* [CP] Check Pods Manifest.lock */,
 				00311995206CC4A400D5FC58 /* Sources */,
 				00311996206CC4A400D5FC58 /* Frameworks */,
 				00311997206CC4A400D5FC58 /* Resources */,
@@ -161,28 +270,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				003119A9206CC4A400D5FC58 /* LaunchScreen.storyboard in Resources */,
+				00AC758620CA25140000C2B0 /* localBigImage0.jpeg in Resources */,
+				00AC758820CA25140000C2B0 /* localImage0.jpeg in Resources */,
+				00AC758B20CA25140000C2B0 /* localImage5.jpeg in Resources */,
+				00AC758F20CA25140000C2B0 /* localImage2.jpeg in Resources */,
 				003119A6206CC4A400D5FC58 /* Assets.xcassets in Resources */,
+				00545E6720CE569800064686 /* 01.jpg in Resources */,
+				00AC758A20CA25140000C2B0 /* localImage6.jpeg in Resources */,
+				00AC758920CA25140000C2B0 /* localImage7.jpeg in Resources */,
 				003119BE206CE28700D5FC58 /* icon-service@3x.png in Resources */,
+				00AC758D20CA25140000C2B0 /* localImage8.jpeg in Resources */,
+				00AC758E20CA25140000C2B0 /* localImage3.jpeg in Resources */,
 				003119A4206CC4A400D5FC58 /* Main.storyboard in Resources */,
 				003119BD206CE28700D5FC58 /* icon-service@2x.png in Resources */,
+				00AC758C20CA25140000C2B0 /* localImage4.jpeg in Resources */,
+				00AC758720CA25140000C2B0 /* localImage1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		905332F57A09F1214FA58D6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToolDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00311995206CC4A400D5FC58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AC759920CA38580000C2B0 /* KLImageBrowserView.m in Sources */,
 				0066D03D20C54DAC00EBD1A9 /* KLAdvertView.m in Sources */,
+				00AC759F20CA61220000C2B0 /* KLImageBrowserUtilities.m in Sources */,
 				003119A1206CC4A400D5FC58 /* ViewController.m in Sources */,
 				003119AC206CC4A400D5FC58 /* main.m in Sources */,
 				0031199E206CC4A400D5FC58 /* AppDelegate.m in Sources */,
 				0066D03820C5467F00EBD1A9 /* UIView+KLLayer.m in Sources */,
+				00AC757A20CA23A30000C2B0 /* KLBrowerTestViewController.m in Sources */,
 				003119BA206CDF5B00D5FC58 /* UIButton+Layout.m in Sources */,
 				003119B4206CC51200D5FC58 /* UIControl+Category.m in Sources */,
+				00AC759C20CA586A0000C2B0 /* KLImageBrowserDownloader.m in Sources */,
+				00AC759320CA31570000C2B0 /* KLImageBrowserVC.m in Sources */,
 				0066D03E20C54DAC00EBD1A9 /* LL_AdvertScrollView.m in Sources */,
+				00AC759620CA37B80000C2B0 /* KLImageBrowserModel.m in Sources */,
+				00545E6520CE54C900064686 /* UIImage+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +462,7 @@
 		};
 		003119B0206CC4A400D5FC58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DACA40E76ECA94BDFD397464 /* Pods-ToolDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +477,7 @@
 		};
 		003119B1206CC4A400D5FC58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD7D31BFCAD4BE79A5FC57F /* Pods-ToolDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
