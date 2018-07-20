@@ -15,6 +15,11 @@
 #define KLLOG(format, ...) nil
 #endif
 
+#define KLLOG_WARNING(discribe) KLLOG(@"%@ ⚠️ SEL-%@ %@", self.class, NSStringFromSelector(_cmd), discribe)
+#define KLLOG_ERROR(discribe) KLLOG(@"%@ ❌ SEL-%@ %@", self.class, NSStringFromSelector(_cmd), discribe)
+
+
+#define KL_NORMALWINDOW [KLImageBrowserUtilities getNormalWindow]
 
 #define KL_IS_IPHONEX (YB_SCREEN_HEIGHT == 812)
 #define KL_HEIGHT_EXTRABOTTOM (YB_IS_IPHONEX ? 34.0 : 0)
@@ -37,6 +42,21 @@ FOUNDATION_EXTERN NSString * const KLImageBrowser_notification_hideBrowerView;
 FOUNDATION_EXTERN NSString * const KLImageBrowser_notification_showBrowerView;
 FOUNDATION_EXTERN NSString * const KLImageBrowser_notification_willShowBrowerViewWithTimeInterval;
 FOUNDATION_EXTERN NSString * const KLImageBrowser_notificationKey_willShowBrowerViewWithTimeInterval;
+
+typedef NS_ENUM(NSUInteger,KLImageBrowserImageViewFillType){
+    KLImageBrowserImageViewFillTypeFullWidth,   //宽度抵满屏幕宽度，高度不定
+    KLImageBrowserImageViewFillTypeCompletely   //保证图片完整显示情况下最大限度填充
+};
+typedef NS_ENUM(NSUInteger,KLImageBrowserScreenOrientation){
+    KLImageBrowserScreenOrientationUnknown, //未知
+    KLImageBrowserScreenOrientationVertical, //屏幕竖直方向展示
+    KLImageBrowserScreenOrientationHorizontal   //屏幕水平方向展示
+};
+typedef NS_ENUM(NSUInteger, KLImageBrowserAnimation) {
+    KLImageBrowserAnimationNone,    //无动画
+    KLImageBrowserAnimationFade,    //渐隐
+    KLImageBrowserAnimationMove     //移动
+};
 
 @interface KLImageBrowserUtilities : NSObject
 

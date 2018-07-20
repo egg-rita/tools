@@ -108,7 +108,7 @@ typedef enum {
 
 - (UIImage *)drawLineByImageView:(UIImageView *)imageView;// 返回虚线image的方法
 
-
+- (UIImage *)imgBluredWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
 
 
 @end

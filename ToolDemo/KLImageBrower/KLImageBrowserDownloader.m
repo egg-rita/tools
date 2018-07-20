@@ -32,8 +32,8 @@ static SDWebImageDownloader *_downloader = nil;
         if (error) {
             if (failed) {
                 failed(error,finished);
-                return ;
             }
+            return ;
         }
         if (success) {success(image,data,finished);}
     }];
@@ -88,7 +88,7 @@ static SDWebImageDownloader *_downloader = nil;
     }
 }
 +(void)setImageCache:(SDImageCache *)imageCache{
-    if (self.imageCache) {
+    if (!self.imageCache) {
         _imageCache = imageCache;
     }
 }

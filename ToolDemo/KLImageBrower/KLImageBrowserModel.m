@@ -107,7 +107,7 @@ char * const KLImageBrowserModel_SELName_cutImage = "cutImageWithTargetRect:comp
     });
 }
 -(void)cutImageWhthTargetRect:(CGRect)targetRect complete:(KLImageBrowserModelCutImageSuccessBlock)complete{
-    KLImageBrowserModel *model = nil;
+    KLImageBrowserModel *model = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         UIImage *resultImage = [KLImageBrowserUtilities cutToRectWithImage:_largeImage rect:targetRect];
         if (complete) {
@@ -143,5 +143,10 @@ char * const KLImageBrowserModel_SELName_cutImage = "cutImageWithTargetRect:comp
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     if (!data) {return;}
     _gifName = [UIImage sd_animatedGIFWithData:data];
+}
+-(void)dealloc{
+    if (downloadToken) {
+        [KLImageBrowserDownloader cancelTaskWithDownloadToken:downloadToken];
+    }
 }
 @end
