@@ -8,7 +8,27 @@
 
 #import "KLPhotoTool.h"
 #import <Photos/Photos.h>
+
+/** NSAssert */
+#if !defined(_NSAssertBody)
+#define NSAssert(condition, desc, ...)    \
+do {                \
+__PRAGMA_PUSH_NO_EXTRA_ARG_WARNINGS \
+if (!(condition)) {        \
+NSString *__assert_file__ = [NSString stringWithUTF8String:__FILE__]; \
+__assert_file__ = __assert_file__ ? __assert_file__ : @"<Unknown File>"; \
+[[NSAssertionHandler currentHandler] handleFailureInMethod:_cmd \
+object:self file:__assert_file__ \
+lineNumber:__LINE__ description:(desc), ##__VA_ARGS__]; \
+}                \
+__PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
+} while(0)
+#endif
+
+
 static KLPhotoTool *_photoTool = nil;
+
+
 
 @interface KLPhotoTool()
 
@@ -65,7 +85,7 @@ static KLPhotoTool *_photoTool = nil;
     
     return result;
 }
-
+#pragma mark - 保存照片到相册
 +(void)KLSaveNewAssetWithImage:(UIImage*)image{
     if (image) {
         PHAssetCollection *album = [[PHAssetCollection alloc]init];
@@ -104,31 +124,13 @@ PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeReq
         
     } completionHandler:^(BOOL success, NSError *error) {
         NSLog(@"Finished adding asset. %@", (success ? @"Success" : error));
-        /*
-        if (success) {
-          
-           PHFetchResult *result =  [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:identifierArr options:nil];
-           NSMutableArray *assetArr = [NSMutableArray array];
-            [result enumerateObjectsUsingBlock:^(PHAsset*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                NSLog(@"%@--%@",obj,[NSThread currentThread]);
-                if (obj) {
-                    [assetArr addObject:obj];
-                }
-            }];
-            
-            for (PHAsset *asset in assetArr) {
-                [[PHImageManager defaultManager] requestImageDataForAsset:asset
-                                                                  options:nil
-                                                            resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
-                                                                NSLog(@"%ld--%@",(long)orientation,info);
-                                                            }];
-            }
-            
-            
-        }*/
+
     }];
 }
 +(void)KLSaveNewPhototWithURLStr:(NSArray<NSString*>*)URLArr{
+    if (URLArr.count<=0) {
+        return;
+    }
     
     NSMutableArray *identifierArr = [NSMutableArray arrayWithCapacity:URLArr.count];
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
@@ -142,14 +144,14 @@ PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeReq
         }
         
     } completionHandler:^(BOOL success, NSError * _Nullable error) {
-        NSLog(@"Finished adding asset. %@", (success ? @"Success" : error));
+//        NSLog(@"Finished adding asset. %@", (success ? @"Success" : error));
         
          if (success) {
          
          PHFetchResult *result =  [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:identifierArr options:nil];
          NSMutableArray *assetArr = [NSMutableArray array];
          [result enumerateObjectsUsingBlock:^(PHAsset*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-         NSLog(@"%@--%@",obj,[NSThread currentThread]);
+//         NSLog(@"%@--%@",obj,[NSThread currentThread]);
          if (obj) {
          [assetArr addObject:obj];
          }
@@ -159,7 +161,8 @@ PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeReq
          [[PHImageManager defaultManager] requestImageDataForAsset:asset
          options:nil
          resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
-         NSLog(@"%ld--%@",(long)orientation,info);
+             
+//         NSLog(@"%ld--%@",(long)orientation,info);
          }];
          }
          
@@ -167,6 +170,54 @@ PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeReq
          }
     }];
 }
+
+#pragma mark - 保存视频到相册
++(void)KLSaveNewVideoWithVideoPath:(NSArray<NSString*>*)videoPathArr WithAssetBlock:(AssetArrBlock)assetArr{
+    if (videoPathArr.count <= 0) {
+        return;
+    }
+    
+    NSMutableArray *identifierArr = [NSMutableArray arrayWithCapacity:videoPathArr.count];
+    
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+        
+        PHAssetCollection *album = [[PHAssetCollection alloc]init];
+        PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:album];
+        for (NSString *urlPath in videoPathArr) {
+         PHAssetChangeRequest *assetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL URLWithString:urlPath]];
+           PHObjectPlaceholder *assetplaceholder = [assetRequest placeholderForCreatedAsset];
+            [albumChangeRequest addAssets:@[assetplaceholder]];
+            [identifierArr addObject:assetplaceholder.localIdentifier];
+        }
+    } completionHandler:^(BOOL success, NSError * _Nullable error) {
+        if (success) {//成功
+           PHFetchResult *result = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:identifierArr options:nil];
+            NSMutableArray *assetArr = [NSMutableArray array];
+            NSMutableArray *avAssetArr = [NSMutableArray array];
+            
+            [result enumerateObjectsUsingBlock:^(PHAsset* _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+
+                if (obj) {
+    NSAssert([obj isMemberOfClass:NSClassFromString(@"PHAsset")], @"obj is not PHAsset Class.");
+                    [[PHImageManager defaultManager] requestAVAssetForVideo:obj options:nil resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+                        if (asset) {
+                            NSAssert([asset isMemberOfClass:NSClassFromString(@"AVAsset")], @"asset is not AVAsset Class.");
+                            [avAssetArr addObject:asset];
+                            [assetArr addObject:obj];
+                        }
+                    }];
+                    
+                }
+            }];
+            
+            
+        }
+    }];
+}
+
+
+
+
 -(void)dealloc{
     NSLog(@"%@销毁了",self);
 }

@@ -10,21 +10,24 @@
 #import "UIControl+Category.h"
 #import "UIButton+Layout.h"
 #import "UIView+KLLayer.h"
-#import "KLBrowerTestViewController.h"
+
 #import "UIImage+Category.h"
 #import "KLDrawView.h"
 #import "KLAlertController.h"
-#import "SelectTypeView.h"
+
 #import "KLBlurreView.h"
 
 #import "UserData.h"
 #import <GPUImage.h>
 #import <UIImageView+WebCache.h>
-
+#import "KLReflectionView.h"
+#import "KLClickAnimateView.h"
+#import "VideoTranscribeVC.h"
 #import "KLPhotoTool.h"
 @interface ViewController ()
 @property(nonatomic,strong) UIImageView *imgview;
 @property(nonatomic,strong) KLDrawView *drawview;
+@property(nonatomic,strong)UIView *contentView;
 
 @end
 
@@ -32,7 +35,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(20, 200, 200, 9)];
+    bgView.backgroundColor = [UIColor redColor];
     
+    bgView.layer.shadowOffset = CGSizeMake(0, 4);
+    bgView.layer.shadowColor = [UIColor blackColor].CGColor;
+    bgView.layer.shadowRadius = 4;
+    bgView.layer.shadowOpacity = 1.0;
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, 0)];
+    [path addLineToPoint:CGPointMake(200, 0)];
+    [path addLineToPoint:CGPointMake(200, 10)];
+    [path addLineToPoint:CGPointMake(0, 10)];
+    [path closePath];
+//    [path addLineToPoint:CGPointMake(200, 9)];
+    bgView.layer.shadowPath = path.CGPath;
+    
+    [self.view addSubview:bgView];
+//    [self testAnimate1];
 }
 -(void)test9{
     UIImageView *imgView = [[UIImageView alloc]init];
@@ -69,6 +91,8 @@
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    VideoTranscribeVC *vc = [[VideoTranscribeVC alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 //    UserData *user = [[UserData alloc]init];
 //    user.name = @"张三";
 //    user.birthday = @"2019";
@@ -76,40 +100,33 @@
 //    [user saveUserData];
     
 //    [self test12];
-    [self test5];
+//    [self test5];
     
 }
 -(void)test12{
-    KLAlertController * alert = [[KLAlertController alloc]init];
+    KLAlertController *vc = [[KLAlertController alloc]init];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        SelectTypeView *subview = [[SelectTypeView alloc]initWithFrame:CGRectMake(0, 100, CGRectGetWidth(self.view.frame), 300)];
-        subview.btnTitleArr = @[@"合同编号",@"客户姓名",@"车架号"];
-        subview.transform = CGAffineTransformMakeScale(0.3, 0.3);
-        [UIView animateWithDuration:0.5//动画持续时间
-                              delay:0//延迟执行动画
-             usingSpringWithDamping:0.5//阻尼系数
-              initialSpringVelocity:8.0// 速度
-                            options:UIViewAnimationOptionCurveLinear
-                         animations:^{
-                             [alert configContentView:subview];
-                             subview.transform = CGAffineTransformIdentity;
-                             subview.title = @"搜索方式";
-                             subview.backgroundColor = [UIColor whiteColor];
-                             __weak typeof(subview) weakView = subview;
-                             __weak typeof(alert) weakAlert = alert;
-                             subview.cancleBlock = ^{
-                                 weakView.hidden = YES;
-                                 [weakAlert dismissViewControllerAnimated:YES completion:nil];
-                             };
-                         }
-                         completion:^(BOOL finished) {
-                             
-                         }];
-    });
+    KLAlertViewAnimate *customPresentationController = [[KLAlertViewAnimate alloc]initWithPresentedViewController:vc presentingViewController:self];
+    vc.transitioningDelegate = customPresentationController;
     
-    [self presentViewController:alert animated:YES completion:nil];
+    [vc configContentView:self.contentView];
+    
+    [self presentViewController:vc animated:YES completion:nil];
 }
+
+-(UIView *)contentView{
+    if (!_contentView) {
+        UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(100, 300, 200, 300)];
+        contentView.backgroundColor = [UIColor whiteColor];
+        contentView.layer.cornerRadius  =20.f;
+        contentView.layer.borderColor = [UIColor redColor].CGColor;
+        contentView.layer.borderWidth  =2.0f;
+        _contentView = contentView;
+    }
+    return _contentView;
+}
+
+
 -(void)test11{
     NSString *filePath = [[NSBundle mainBundle]pathForResource:@"KLImage" ofType:@"bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:filePath];
@@ -206,13 +223,6 @@
 
 }
 
-
--(void)test2{
-    KLBrowerTestViewController *vc = [[KLBrowerTestViewController alloc]init];
-    [self addChildViewController:vc];
-    [self.view addSubview:vc.view];
-}
-
 -(void)test1{
     //避免重复点击
     UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -247,6 +257,89 @@
 }
 -(void)btnaction{
     NSLog(@"间隔2秒点击");
+    [self test12];
+}
+#pragma makr - CAReplicatorLayer 动画
+-(void)testAnimate1{
+    
+    /*
+    CGSize size = CGSizeMake(100, 100);
+    UIColor *color = [UIColor redColor];
+    CALayer *itemLayer = [CALayer layer];
+    itemLayer.bounds = CGRectMake(0, 0, size.width/6, size.width/6);
+    itemLayer.position = CGPointMake(size.width/2, 5);
+    itemLayer.cornerRadius = itemLayer.bounds.size.width*0.5;
+    itemLayer.backgroundColor = color.CGColor;
+    itemLayer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1);
+    //基本动画
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.fromValue = @1;
+    animation.toValue = @0.1;
+    animation.duration = 1.0;
+    animation.repeatCount = HUGE_VALF;//重复次数为最大（无限）
+    [itemLayer addAnimation:animation forKey:@"animation"];
+    
+    CAReplicatorLayer *replocatorLayer = [CAReplicatorLayer layer];
+    replocatorLayer.frame = CGRectMake(0, 0, size.width, size.height);
+    replocatorLayer.position = self.view.center;
+    replocatorLayer.backgroundColor = [UIColor clearColor].CGColor;
+    NSInteger numOfSpot = 15;
+    replocatorLayer.instanceCount = numOfSpot;//包括自己在内的多个图层副本
+    CGFloat angle = (M_PI *2.0)/numOfSpot;
+    replocatorLayer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1);
+    replocatorLayer.instanceDelay = 1.0/numOfSpot;//复制副本之间的延迟 默认是0
+    [replocatorLayer addSublayer:itemLayer];
+    
+    [self.view.layer addSublayer:replocatorLayer];
+    */
+    //关键帧动画
+    /*
+    CGSize size = CGSizeMake(100, 100);
+    UIColor *color = [UIColor redColor];
+    CALayer *itemLayer = [CALayer layer];
+    itemLayer.bounds = CGRectMake(0, 0, size.width/6, size.width/6);
+    itemLayer.position = CGPointMake(size.width/2, 5);
+    itemLayer.cornerRadius = itemLayer.bounds.size.width*0.5;
+    itemLayer.backgroundColor = color.CGColor;
+
+    CGPoint p0,p1,p2;
+    p0 = CGPointMake(size.width*0.5, size.height);
+    p1 = CGPointMake(size.width/2.0*(1-cos(M_PI*30/180.0)), size.width/2.0*(1-sin(M_PI*30/180.0)));
+    p2 = CGPointMake(size.width/2.0*(1+cos(M_PI*30/180.0)), size.width/2.0*(1-sin(M_PI*30/180.0)));
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    animation.duration = 1.5;
+    animation.values = @[[NSValue valueWithCGPoint:p0],
+                         [NSValue valueWithCGPoint:p1],
+                         [NSValue valueWithCGPoint:p2]];
+    animation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    animation.repeatCount = HUGE_VALF;
+    [itemLayer addAnimation:animation forKey:@"animation"];
+    
+    NSInteger numOfSpot = 3;
+    CAReplicatorLayer *replocatorLayer = [CAReplicatorLayer layer];
+    replocatorLayer.frame = CGRectMake(0, 0, size.width, size.height);
+    replocatorLayer.position = self.view.center;
+    replocatorLayer.backgroundColor = [UIColor clearColor].CGColor;
+    replocatorLayer.instanceCount = numOfSpot;
+    CGFloat angle = (M_PI*2) / numOfSpot;   // 计算角度
+    replocatorLayer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1);
+    [replocatorLayer addSublayer:itemLayer];
+    [self.view.layer addSublayer:replocatorLayer];*/
+    
+}
+//倒影
+-(void)reflection{
+    KLReflectionView *refView = [[KLReflectionView alloc]initWithFrame:CGRectMake(10, 80, 200, 200)];
+    refView.padding = 20.f;
+    UIImageView * img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    img.image = [UIImage imageNamed:@"KLImage.bundle/01.jpg"];
+    
+    [refView addSubview:img];
+    [self.view addSubview:refView];
 }
 #pragma makr - semaphoreTest
 -(void)semaphoreTest{

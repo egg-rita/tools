@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface KLAlertController : UIAlertController
--(void)configContentView:(UIView*)subview;
+@interface KLAlertViewAnimate :UIPresentationController<UIViewControllerTransitioningDelegate>
+
+@end
+
+
+@interface KLAlertController : UIViewController
+
+@property(nonatomic,strong)UIView *bgView;
+
+-(void)configContentView:(UIView*)contentView;
 @end

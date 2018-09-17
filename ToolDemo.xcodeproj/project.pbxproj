@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00135A7520ECA9E7009B8BBF /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 00135A7420ECA9E7009B8BBF /* UserData.m */; };
 		00135A7820ECAA3B009B8BBF /* DataBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 00135A7720ECAA3B009B8BBF /* DataBaseObject.m */; };
+		001AD0012138EBFD00A5BB54 /* VideoTranscribeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 001AD0002138EBFD00A5BB54 /* VideoTranscribeVC.m */; };
 		0022B0CF20F6EF45005D68C3 /* KLBlurreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0022B0CE20F6EF45005D68C3 /* KLBlurreView.m */; };
 		0031199E206CC4A400D5FC58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031199D206CC4A400D5FC58 /* AppDelegate.m */; };
 		003119A1206CC4A400D5FC58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119A0206CC4A400D5FC58 /* ViewController.m */; };
@@ -24,11 +25,13 @@
 		0066D03D20C54DAC00EBD1A9 /* KLAdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03920C54DAC00EBD1A9 /* KLAdvertView.m */; };
 		0066D03E20C54DAC00EBD1A9 /* LL_AdvertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */; };
 		00786E6720DCF62300495592 /* KLDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00786E6520DCF62300495592 /* KLDrawView.m */; };
+		00897C38212A5DF700FC0ED4 /* KLClickAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00897C37212A5DF700FC0ED4 /* KLClickAnimateView.m */; };
 		0091A13B20F84378007E4759 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A13A20F84377007E4759 /* Accelerate.framework */; };
 		0091A14220F87E40007E4759 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A14520F87E40007E4759 /* libFMDB.a */; };
 		0091A14320F87E40007E4759 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A14620F87E40007E4759 /* libGPUImage.a */; };
 		0091A14420F87E40007E4759 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A14720F87E40007E4759 /* libSDWebImage.a */; };
-		00AC757A20CA23A30000C2B0 /* KLBrowerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC757920CA23A30000C2B0 /* KLBrowerTestViewController.m */; };
+		00A5AE0C212FBB93002762AB /* KLTransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5AE0B212FBB93002762AB /* KLTransitionAnimate.m */; };
+		00A5AE0F212FBBAD002762AB /* KLAlertViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5AE0E212FBBAD002762AB /* KLAlertViewVC.m */; };
 		00AC758620CA25140000C2B0 /* localBigImage0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757C20CA25140000C2B0 /* localBigImage0.jpeg */; };
 		00AC758720CA25140000C2B0 /* localImage1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757D20CA25140000C2B0 /* localImage1.jpeg */; };
 		00AC758820CA25140000C2B0 /* localImage0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757E20CA25140000C2B0 /* localImage0.jpeg */; };
@@ -39,19 +42,11 @@
 		00AC758D20CA25140000C2B0 /* localImage8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758320CA25140000C2B0 /* localImage8.jpeg */; };
 		00AC758E20CA25140000C2B0 /* localImage3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758420CA25140000C2B0 /* localImage3.jpeg */; };
 		00AC758F20CA25140000C2B0 /* localImage2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758520CA25140000C2B0 /* localImage2.jpeg */; };
-		00AC759320CA31570000C2B0 /* KLImageBrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759220CA31570000C2B0 /* KLImageBrowserVC.m */; };
-		00AC759620CA37B80000C2B0 /* KLImageBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759520CA37B80000C2B0 /* KLImageBrowserModel.m */; };
-		00AC759920CA38580000C2B0 /* KLImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759820CA38580000C2B0 /* KLImageBrowserView.m */; };
-		00AC759C20CA586A0000C2B0 /* KLImageBrowserDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759B20CA586A0000C2B0 /* KLImageBrowserDownloader.m */; };
-		00AC759F20CA61220000C2B0 /* KLImageBrowserUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC759E20CA61220000C2B0 /* KLImageBrowserUtilities.m */; };
+		00BEFAD0212ED110009B5DE5 /* KLReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BEFACF212ED110009B5DE5 /* KLReflectionView.m */; };
 		00DD1AA520EA1CE10057E030 /* KLAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DD1AA420EA1CE10057E030 /* KLAlertController.m */; };
 		00F2557A20FD803C003D2E84 /* KLPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2557920FD803C003D2E84 /* KLPhotoTool.m */; };
 		00F2557C20FD809A003D2E84 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F2557B20FD809A003D2E84 /* Photos.framework */; };
 		00F2557E20FDCC14003D2E84 /* KLImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00F2557D20FDCC14003D2E84 /* KLImage.bundle */; };
-		00F2558720FF1319003D2E84 /* SelectTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2558620FF1319003D2E84 /* SelectTypeView.m */; };
-		00F2558E20FF4606003D2E84 /* KLImageBrowserAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2558D20FF4606003D2E84 /* KLImageBrowserAnimatedTransitioning.m */; };
-		00F2559120FF46BE003D2E84 /* KLImageBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2559020FF46BE003D2E84 /* KLImageBrowserCell.m */; };
-		00F2559420FF580E003D2E84 /* KLImageBrowserViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2559320FF580E003D2E84 /* KLImageBrowserViewLayout.m */; };
 		B695C5DA2C2CDC2351C65917 /* libPods-ToolDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2080334BA0FF7607229973 /* libPods-ToolDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +55,8 @@
 		00135A7420ECA9E7009B8BBF /* UserData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		00135A7620ECAA3B009B8BBF /* DataBaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseObject.h; sourceTree = "<group>"; };
 		00135A7720ECAA3B009B8BBF /* DataBaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseObject.m; sourceTree = "<group>"; };
+		001ACFFF2138EBFD00A5BB54 /* VideoTranscribeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoTranscribeVC.h; sourceTree = "<group>"; };
+		001AD0002138EBFD00A5BB54 /* VideoTranscribeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoTranscribeVC.m; sourceTree = "<group>"; };
 		0022B0CD20F6EF45005D68C3 /* KLBlurreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBlurreView.h; sourceTree = "<group>"; };
 		0022B0CE20F6EF45005D68C3 /* KLBlurreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLBlurreView.m; sourceTree = "<group>"; };
 		00311999206CC4A400D5FC58 /* ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,12 +85,16 @@
 		0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LL_AdvertScrollView.m; sourceTree = "<group>"; };
 		00786E6520DCF62300495592 /* KLDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDrawView.m; sourceTree = "<group>"; };
 		00786E6620DCF62300495592 /* KLDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDrawView.h; sourceTree = "<group>"; };
+		00897C36212A5DF700FC0ED4 /* KLClickAnimateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLClickAnimateView.h; sourceTree = "<group>"; };
+		00897C37212A5DF700FC0ED4 /* KLClickAnimateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLClickAnimateView.m; sourceTree = "<group>"; };
 		0091A13A20F84377007E4759 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0091A14520F87E40007E4759 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0091A14620F87E40007E4759 /* libGPUImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGPUImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0091A14720F87E40007E4759 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		00AC757820CA23A30000C2B0 /* KLBrowerTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBrowerTestViewController.h; sourceTree = "<group>"; };
-		00AC757920CA23A30000C2B0 /* KLBrowerTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLBrowerTestViewController.m; sourceTree = "<group>"; };
+		00A5AE0A212FBB93002762AB /* KLTransitionAnimate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLTransitionAnimate.h; sourceTree = "<group>"; };
+		00A5AE0B212FBB93002762AB /* KLTransitionAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLTransitionAnimate.m; sourceTree = "<group>"; };
+		00A5AE0D212FBBAD002762AB /* KLAlertViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAlertViewVC.h; sourceTree = "<group>"; };
+		00A5AE0E212FBBAD002762AB /* KLAlertViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAlertViewVC.m; sourceTree = "<group>"; };
 		00AC757C20CA25140000C2B0 /* localBigImage0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localBigImage0.jpeg; sourceTree = "<group>"; };
 		00AC757D20CA25140000C2B0 /* localImage1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage1.jpeg; sourceTree = "<group>"; };
 		00AC757E20CA25140000C2B0 /* localImage0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage0.jpeg; sourceTree = "<group>"; };
@@ -104,31 +105,14 @@
 		00AC758320CA25140000C2B0 /* localImage8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage8.jpeg; sourceTree = "<group>"; };
 		00AC758420CA25140000C2B0 /* localImage3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage3.jpeg; sourceTree = "<group>"; };
 		00AC758520CA25140000C2B0 /* localImage2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage2.jpeg; sourceTree = "<group>"; };
-		00AC759120CA31570000C2B0 /* KLImageBrowserVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserVC.h; sourceTree = "<group>"; };
-		00AC759220CA31570000C2B0 /* KLImageBrowserVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserVC.m; sourceTree = "<group>"; };
-		00AC759420CA37B80000C2B0 /* KLImageBrowserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserModel.h; sourceTree = "<group>"; };
-		00AC759520CA37B80000C2B0 /* KLImageBrowserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserModel.m; sourceTree = "<group>"; };
-		00AC759720CA38580000C2B0 /* KLImageBrowserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserView.h; sourceTree = "<group>"; };
-		00AC759820CA38580000C2B0 /* KLImageBrowserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserView.m; sourceTree = "<group>"; };
-		00AC759A20CA586A0000C2B0 /* KLImageBrowserDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserDownloader.h; sourceTree = "<group>"; };
-		00AC759B20CA586A0000C2B0 /* KLImageBrowserDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserDownloader.m; sourceTree = "<group>"; };
-		00AC759D20CA61220000C2B0 /* KLImageBrowserUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserUtilities.h; sourceTree = "<group>"; };
-		00AC759E20CA61220000C2B0 /* KLImageBrowserUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserUtilities.m; sourceTree = "<group>"; };
+		00BEFACE212ED110009B5DE5 /* KLReflectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLReflectionView.h; sourceTree = "<group>"; };
+		00BEFACF212ED110009B5DE5 /* KLReflectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLReflectionView.m; sourceTree = "<group>"; };
 		00DD1AA320EA1CE10057E030 /* KLAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAlertController.h; sourceTree = "<group>"; };
 		00DD1AA420EA1CE10057E030 /* KLAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAlertController.m; sourceTree = "<group>"; };
 		00F2557820FD803C003D2E84 /* KLPhotoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLPhotoTool.h; sourceTree = "<group>"; };
 		00F2557920FD803C003D2E84 /* KLPhotoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLPhotoTool.m; sourceTree = "<group>"; };
 		00F2557B20FD809A003D2E84 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		00F2557D20FDCC14003D2E84 /* KLImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KLImage.bundle; sourceTree = "<group>"; };
-		00F2558520FF1319003D2E84 /* SelectTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectTypeView.h; sourceTree = "<group>"; };
-		00F2558620FF1319003D2E84 /* SelectTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectTypeView.m; sourceTree = "<group>"; };
-		00F2558B20FF3E4D003D2E84 /* KLImageBrowserScreenOrientationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserScreenOrientationProtocol.h; sourceTree = "<group>"; };
-		00F2558C20FF4606003D2E84 /* KLImageBrowserAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserAnimatedTransitioning.h; sourceTree = "<group>"; };
-		00F2558D20FF4606003D2E84 /* KLImageBrowserAnimatedTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserAnimatedTransitioning.m; sourceTree = "<group>"; };
-		00F2558F20FF46BE003D2E84 /* KLImageBrowserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserCell.h; sourceTree = "<group>"; };
-		00F2559020FF46BE003D2E84 /* KLImageBrowserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserCell.m; sourceTree = "<group>"; };
-		00F2559220FF580E003D2E84 /* KLImageBrowserViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageBrowserViewLayout.h; sourceTree = "<group>"; };
-		00F2559320FF580E003D2E84 /* KLImageBrowserViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageBrowserViewLayout.m; sourceTree = "<group>"; };
 		5BD7D31BFCAD4BE79A5FC57F /* Pods-ToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolDemo/Pods-ToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CF2080334BA0FF7607229973 /* libPods-ToolDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToolDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACA40E76ECA94BDFD397464 /* Pods-ToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolDemo/Pods-ToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +146,15 @@
 			path = FMDBTools;
 			sourceTree = "<group>";
 		};
+		001ACFFE2138EBCA00A5BB54 /* 视频录制 */ = {
+			isa = PBXGroup;
+			children = (
+				001ACFFF2138EBFD00A5BB54 /* VideoTranscribeVC.h */,
+				001AD0002138EBFD00A5BB54 /* VideoTranscribeVC.m */,
+			);
+			path = "视频录制";
+			sourceTree = "<group>";
+		};
 		00311990206CC4A400D5FC58 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +176,9 @@
 		0031199B206CC4A400D5FC58 /* ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				001ACFFE2138EBCA00A5BB54 /* 视频录制 */,
+				00A5AE09212FBB5C002762AB /* KLCustomAlertView */,
+				00A5AE08212F9D30002762AB /* Navigation */,
 				00F2557D20FDCC14003D2E84 /* KLImage.bundle */,
 				00786E6620DCF62300495592 /* KLDrawView.h */,
 				00786E6520DCF62300495592 /* KLDrawView.m */,
@@ -192,8 +188,6 @@
 				0022B0CE20F6EF45005D68C3 /* KLBlurreView.m */,
 				0031199F206CC4A400D5FC58 /* ViewController.h */,
 				003119A0206CC4A400D5FC58 /* ViewController.m */,
-				00F2558520FF1319003D2E84 /* SelectTypeView.h */,
-				00F2558620FF1319003D2E84 /* SelectTypeView.m */,
 				00DD1AA320EA1CE10057E030 /* KLAlertController.h */,
 				00DD1AA420EA1CE10057E030 /* KLAlertController.m */,
 				0066D03720C5467F00EBD1A9 /* UIView+KLLayer.h */,
@@ -210,11 +204,12 @@
 				00545E6320CE54C900064686 /* UIImage+Category.m */,
 				0042AAE120D120F90090CEEA /* KLDeviceModel.h */,
 				0042AAE220D120F90090CEEA /* KLDeviceModel.m */,
+				00897C36212A5DF700FC0ED4 /* KLClickAnimateView.h */,
+				00897C37212A5DF700FC0ED4 /* KLClickAnimateView.m */,
+				00BEFACE212ED110009B5DE5 /* KLReflectionView.h */,
+				00BEFACF212ED110009B5DE5 /* KLReflectionView.m */,
 				00F2557720FD7FE6003D2E84 /* PHPhotoTool */,
 				00135A7220ECA9AA009B8BBF /* FMDBTools */,
-				00AC759020CA313F0000C2B0 /* KLImageBrower */,
-				00AC757820CA23A30000C2B0 /* KLBrowerTestViewController.h */,
-				00AC757920CA23A30000C2B0 /* KLBrowerTestViewController.m */,
 				003119A2206CC4A400D5FC58 /* Main.storyboard */,
 				003119A5206CC4A400D5FC58 /* Assets.xcassets */,
 				003119A7206CC4A400D5FC58 /* LaunchScreen.storyboard */,
@@ -223,6 +218,24 @@
 				00AC757B20CA25140000C2B0 /* LocalImages */,
 			);
 			path = ToolDemo;
+			sourceTree = "<group>";
+		};
+		00A5AE08212F9D30002762AB /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		00A5AE09212FBB5C002762AB /* KLCustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				00A5AE0A212FBB93002762AB /* KLTransitionAnimate.h */,
+				00A5AE0B212FBB93002762AB /* KLTransitionAnimate.m */,
+				00A5AE0D212FBBAD002762AB /* KLAlertViewVC.h */,
+				00A5AE0E212FBBAD002762AB /* KLAlertViewVC.m */,
+			);
+			path = KLCustomAlertView;
 			sourceTree = "<group>";
 		};
 		00AC757B20CA25140000C2B0 /* LocalImages */ = {
@@ -240,30 +253,6 @@
 				00AC758520CA25140000C2B0 /* localImage2.jpeg */,
 			);
 			path = LocalImages;
-			sourceTree = "<group>";
-		};
-		00AC759020CA313F0000C2B0 /* KLImageBrower */ = {
-			isa = PBXGroup;
-			children = (
-				00AC759A20CA586A0000C2B0 /* KLImageBrowserDownloader.h */,
-				00AC759B20CA586A0000C2B0 /* KLImageBrowserDownloader.m */,
-				00F2558C20FF4606003D2E84 /* KLImageBrowserAnimatedTransitioning.h */,
-				00F2558D20FF4606003D2E84 /* KLImageBrowserAnimatedTransitioning.m */,
-				00AC759D20CA61220000C2B0 /* KLImageBrowserUtilities.h */,
-				00AC759E20CA61220000C2B0 /* KLImageBrowserUtilities.m */,
-				00AC759420CA37B80000C2B0 /* KLImageBrowserModel.h */,
-				00AC759520CA37B80000C2B0 /* KLImageBrowserModel.m */,
-				00F2559220FF580E003D2E84 /* KLImageBrowserViewLayout.h */,
-				00F2559320FF580E003D2E84 /* KLImageBrowserViewLayout.m */,
-				00AC759720CA38580000C2B0 /* KLImageBrowserView.h */,
-				00AC759820CA38580000C2B0 /* KLImageBrowserView.m */,
-				00F2558F20FF46BE003D2E84 /* KLImageBrowserCell.h */,
-				00F2559020FF46BE003D2E84 /* KLImageBrowserCell.m */,
-				00AC759120CA31570000C2B0 /* KLImageBrowserVC.h */,
-				00AC759220CA31570000C2B0 /* KLImageBrowserVC.m */,
-				00F2558B20FF3E4D003D2E84 /* KLImageBrowserScreenOrientationProtocol.h */,
-			);
-			path = KLImageBrower;
 			sourceTree = "<group>";
 		};
 		00F2557720FD7FE6003D2E84 /* PHPhotoTool */ = {
@@ -428,32 +417,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F2559420FF580E003D2E84 /* KLImageBrowserViewLayout.m in Sources */,
 				00135A7520ECA9E7009B8BBF /* UserData.m in Sources */,
+				00BEFAD0212ED110009B5DE5 /* KLReflectionView.m in Sources */,
 				0022B0CF20F6EF45005D68C3 /* KLBlurreView.m in Sources */,
-				00AC759920CA38580000C2B0 /* KLImageBrowserView.m in Sources */,
 				0066D03D20C54DAC00EBD1A9 /* KLAdvertView.m in Sources */,
 				0042AAE320D120F90090CEEA /* KLDeviceModel.m in Sources */,
-				00AC759F20CA61220000C2B0 /* KLImageBrowserUtilities.m in Sources */,
 				003119A1206CC4A400D5FC58 /* ViewController.m in Sources */,
 				003119AC206CC4A400D5FC58 /* main.m in Sources */,
-				00F2559120FF46BE003D2E84 /* KLImageBrowserCell.m in Sources */,
 				00135A7820ECAA3B009B8BBF /* DataBaseObject.m in Sources */,
 				0031199E206CC4A400D5FC58 /* AppDelegate.m in Sources */,
 				0066D03820C5467F00EBD1A9 /* UIView+KLLayer.m in Sources */,
-				00AC757A20CA23A30000C2B0 /* KLBrowerTestViewController.m in Sources */,
 				00DD1AA520EA1CE10057E030 /* KLAlertController.m in Sources */,
 				003119BA206CDF5B00D5FC58 /* UIButton+Layout.m in Sources */,
+				001AD0012138EBFD00A5BB54 /* VideoTranscribeVC.m in Sources */,
 				003119B4206CC51200D5FC58 /* UIControl+Category.m in Sources */,
-				00AC759C20CA586A0000C2B0 /* KLImageBrowserDownloader.m in Sources */,
-				00AC759320CA31570000C2B0 /* KLImageBrowserVC.m in Sources */,
+				00897C38212A5DF700FC0ED4 /* KLClickAnimateView.m in Sources */,
+				00A5AE0C212FBB93002762AB /* KLTransitionAnimate.m in Sources */,
 				00F2557A20FD803C003D2E84 /* KLPhotoTool.m in Sources */,
-				00F2558E20FF4606003D2E84 /* KLImageBrowserAnimatedTransitioning.m in Sources */,
 				0066D03E20C54DAC00EBD1A9 /* LL_AdvertScrollView.m in Sources */,
-				00AC759620CA37B80000C2B0 /* KLImageBrowserModel.m in Sources */,
-				00F2558720FF1319003D2E84 /* SelectTypeView.m in Sources */,
 				00786E6720DCF62300495592 /* KLDrawView.m in Sources */,
 				00545E6520CE54C900064686 /* UIImage+Category.m in Sources */,
+				00A5AE0F212FBBAD002762AB /* KLAlertViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

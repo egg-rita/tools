@@ -8,6 +8,7 @@
 
 #import "KLDeviceModel.h"
 #import <sys/utsname.h>
+
 @implementation KLDeviceModel
 //苹果手机检测
 +(NSString*)iphoneType{
@@ -36,7 +37,12 @@
     else if ([deviceModel isEqualToString:@"iPhone9,3"])    {return @"iPhone 7 (GSM)";}
     else if ([deviceModel isEqualToString:@"iPhone9,2"])    {return @"iPhone 7 Plus (CDMA)";}
     else if ([deviceModel isEqualToString:@"iPhone9,4"])    {return @"iPhone 7 Plus (GSM)";}
-    
+    else if ([deviceModel isEqualToString:@"iPhone10,1"])   {return @"iPhone 8";}
+    else if ([deviceModel isEqualToString:@"iPhone10,4"])   {return @"iPhone 8";}
+    else if ([deviceModel isEqualToString:@"iPhone10,2"])   {return @"IPhone 8 Plus";}
+    else if ([deviceModel isEqualToString:@"iPhone10,5"])   {return @"IPhone 8 Plus";}
+    else if ([deviceModel isEqualToString:@"iPhone10,3"])   {return @"IPhone X";}
+    else if ([deviceModel isEqualToString:@"iPhone10,6"])   {return @"IPhone X";}
     return deviceModel;
 }
 
