@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
@@ -8,21 +23,24 @@ PODS:
   - SDWebImage/Core (4.3.3)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.2.0)
   - FMDB (~> 2.7.2)
   - GPUImage (~> 0.1.7)
   - SDWebImage (~> 4.3.3)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
     - FMDB
     - GPUImage
     - SDWebImage
 
 SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 7dffd9806151a1bec95f399bce90e41dd5f5bdd5
+PODFILE CHECKSUM: b282d34d328a01d9b100a957f0a13570c4249fd8
 
 COCOAPODS: 1.5.0

@@ -29,5 +29,11 @@ typedef void(^AVAssetArrBlock)(NSMutableArray<AVAsset*> *avassetArr);
 
 
 #pragma mark - 保存视频到相册中
-+(void)KLSaveNewVideoWithVideoPath:(NSArray<NSString*>*)videoPathArr WithAssetBlock:(AssetArrBlock)assetArr;
++(void)KLSaveNewVideoWithVideoPath:(NSArray<NSString*>*)videoPathArr WithAssetBlock:(AVAssetArrBlock)avAssetArrBlock;
+//获取视频第一帧图像
++(UIImage*)klGetVideoPreViewImage:(NSURL *)path;
+//获取视频时长和大小
++ (NSDictionary *)getVideoInfoWithSourcePath:(NSString *)path;
+//压缩视频
++(NSURL*)compressVideoInfoWithSourcePath:(NSURL*)scourceURL;
 @end

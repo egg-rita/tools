@@ -171,8 +171,8 @@ PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeReq
     }];
 }
 
-#pragma mark - 保存视频到相册
-+(void)KLSaveNewVideoWithVideoPath:(NSArray<NSString*>*)videoPathArr WithAssetBlock:(AssetArrBlock)assetArr{
+#pragma mark - 保存视频到相册(子线程执行)
++(void)KLSaveNewVideoWithVideoPath:(NSArray<NSString*>*)videoPathArr WithAssetBlock:(AVAssetArrBlock)avAssetArrBlock{
     if (videoPathArr.count <= 0) {
         return;
     }
@@ -184,39 +184,158 @@ PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeReq
         PHAssetCollection *album = [[PHAssetCollection alloc]init];
         PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:album];
         for (NSString *urlPath in videoPathArr) {
-         PHAssetChangeRequest *assetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL URLWithString:urlPath]];
-           PHObjectPlaceholder *assetplaceholder = [assetRequest placeholderForCreatedAsset];
+            PHAssetChangeRequest *assetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL URLWithString:urlPath]];
+            PHObjectPlaceholder *assetplaceholder = [assetRequest placeholderForCreatedAsset];
             [albumChangeRequest addAssets:@[assetplaceholder]];
             [identifierArr addObject:assetplaceholder.localIdentifier];
         }
     } completionHandler:^(BOOL success, NSError * _Nullable error) {
         if (success) {//成功
-           PHFetchResult *result = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:identifierArr options:nil];
+            PHFetchResult *result = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:identifierArr options:nil];
             NSMutableArray *assetArr = [NSMutableArray array];
             NSMutableArray *avAssetArr = [NSMutableArray array];
             
             [result enumerateObjectsUsingBlock:^(PHAsset* _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-
+                
                 if (obj) {
-    NSAssert([obj isMemberOfClass:NSClassFromString(@"PHAsset")], @"obj is not PHAsset Class.");
+                    NSAssert([obj isKindOfClass:NSClassFromString(@"PHAsset")], @"obj is not PHAsset Class.");
                     [[PHImageManager defaultManager] requestAVAssetForVideo:obj options:nil resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
                         if (asset) {
-                            NSAssert([asset isMemberOfClass:NSClassFromString(@"AVAsset")], @"asset is not AVAsset Class.");
+                            NSAssert([asset isKindOfClass:NSClassFromString(@"AVAsset")], @"asset is not AVAsset Class.");
                             [avAssetArr addObject:asset];
                             [assetArr addObject:obj];
+                            
+                            if (avAssetArrBlock) {
+                                avAssetArrBlock(avAssetArr);
+                            }
+                            
                         }
                     }];
                     
                 }
             }];
-            
-            
+
         }
     }];
 }
 
+//获取视频第一帧图像
++(UIImage*)klGetVideoPreViewImage:(NSURL *)path
+{
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:path options:nil];
+    AVAssetImageGenerator *assetGen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    
+    assetGen.appliesPreferredTrackTransform = YES;
+    CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+    NSError *error = nil;
+    CMTime actualTime;
+    CGImageRef image = [assetGen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+    UIImage *videoImage = [[UIImage alloc] initWithCGImage:image];
+    CGImageRelease(image);
+    return videoImage;
+}
 
+//获取视频时长和大小
++ (NSDictionary *)getVideoInfoWithSourcePath:(NSString *)path{
+    if (!path) {
+        return @{};
+    }
+    AVURLAsset * asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:path]];
+    CMTime time = [asset duration];
+    int seconds = ceil(time.value/time.timescale);
+    NSInteger fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
+    return @{@"size" : @(fileSize), @"duration" : @(seconds)};
+    
+}
+//视频压缩
++(NSURL*)compressVideoInfoWithSourcePath:(NSURL*)scourceURL{
+    if (!scourceURL) {
+        return nil;
+    }
+    //1.创建压缩后存放的视频文件
+    //获取cache
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *completePath = [NSString stringWithFormat:@"%@/videos",cachePath];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:completePath]) {//保存路径不存在
+        BOOL result = [[NSFileManager defaultManager] createDirectoryAtPath:completePath withIntermediateDirectories:YES attributes:nil error:nil];
+        if (!result) {//文件创建失败
+            NSLog(@"文件创建失败");
+            return nil;
+        }
+    }
+    
+    //2.用时间做文件的唯一标示，防止出现重复文件
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyyMMddHHmmss"];
+    NSString *currentTime = [formatter stringFromDate:[NSDate date]];
+    
+    //3.创建压缩后导出的视频路径
+    NSURL *outPutURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/output-%@.mp4",completePath,currentTime]];
+    return [self convertVideoQuailtyWithInputURL:scourceURL outputURL:outPutURL completeHandler:nil];
+}
 
++(NSURL*)convertVideoQuailtyWithInputURL:(NSURL*)inputURL
+                               outputURL:(NSURL*)outputURL
+                         completeHandler:(void (^)(AVAssetExportSession*))handler
+{
+    __block NSURL *backURL = outputURL;
+    if (!backURL) {
+        return nil;
+    }
+    AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:inputURL options:nil];
+    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]initWithAsset:avAsset presetName:AVAssetExportPresetMediumQuality];
+    exportSession.outputURL = backURL;//视频压缩后的存放路径
+    exportSession.outputFileType = AVFileTypeMPEG4;//设置转换后的格式
+    exportSession.shouldOptimizeForNetworkUse = YES;
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+        switch (exportSession.status) {
+            case AVAssetExportSessionStatusUnknown:
+            {
+                NSLog(@"AVAssetExportSessionStatusUnknown");
+                backURL = nil;
+                break;
+            }
+            case AVAssetExportSessionStatusWaiting:
+            {
+                NSLog(@"AVAssetExportSessionStatusWaiting");
+                backURL = nil;
+                break;
+            }
+            case AVAssetExportSessionStatusExporting:
+            {
+                NSLog(@"AVAssetExportSessionStatusExporting");
+                backURL = nil;
+                break;
+            }
+            case AVAssetExportSessionStatusCompleted://完成
+            {
+                NSLog(@"AVAssetExportSessionStatusCompleted");
+                break;
+            }
+            case AVAssetExportSessionStatusFailed:
+            {
+                NSLog(@"AVAssetExportSessionStatusFailed");
+                backURL = nil;
+                break;
+            }
+            case AVAssetExportSessionStatusCancelled:
+            {
+                NSLog(@"AVAssetExportSessionStatusCancelled");
+                backURL = nil;
+                break;
+            }
+            default:
+                backURL = nil;
+                break;
+        }
+        dispatch_semaphore_signal(semaphore);
+    }];
+    
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    return backURL;
+}
 
 -(void)dealloc{
     NSLog(@"%@销毁了",self);

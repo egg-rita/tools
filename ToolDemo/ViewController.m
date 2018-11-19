@@ -10,20 +10,21 @@
 #import "UIControl+Category.h"
 #import "UIButton+Layout.h"
 #import "UIView+KLLayer.h"
-
+#import "CoreAnimateTest.h"
 #import "UIImage+Category.h"
 #import "KLDrawView.h"
 #import "KLAlertController.h"
-
-#import "KLBlurreView.h"
 
 #import "UserData.h"
 #import <GPUImage.h>
 #import <UIImageView+WebCache.h>
 #import "KLReflectionView.h"
-#import "KLClickAnimateView.h"
-#import "VideoTranscribeVC.h"
+#import "WaveAnimateView.h"//波浪动画
+
 #import "KLPhotoTool.h"
+#import "NSObject+KLObjectProperty.h"
+
+#import "UIViewController+KLTranstion.h"
 @interface ViewController ()
 @property(nonatomic,strong) UIImageView *imgview;
 @property(nonatomic,strong) KLDrawView *drawview;
@@ -35,27 +36,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(20, 200, 200, 9)];
-    bgView.backgroundColor = [UIColor redColor];
+    [self.navigationController.navigationBar setHidden:YES];
+//    CoreAnimateTest *coreAnimate = [[CoreAnimateTest alloc]initWithFrame:self.view.bounds];
+//    [self.view addSubview:coreAnimate];
     
-    bgView.layer.shadowOffset = CGSizeMake(0, 4);
-    bgView.layer.shadowColor = [UIColor blackColor].CGColor;
-    bgView.layer.shadowRadius = 4;
-    bgView.layer.shadowOpacity = 1.0;
-    
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(0, 0)];
-    [path addLineToPoint:CGPointMake(200, 0)];
-    [path addLineToPoint:CGPointMake(200, 10)];
-    [path addLineToPoint:CGPointMake(0, 10)];
-    [path closePath];
-//    [path addLineToPoint:CGPointMake(200, 9)];
-    bgView.layer.shadowPath = path.CGPath;
-    
-    [self.view addSubview:bgView];
-//    [self testAnimate1];
+    WaveAnimateView *waveView = [[WaveAnimateView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 50)];
+    [self.view addSubview:waveView];
 }
+
+
 -(void)test9{
     UIImageView *imgView = [[UIImageView alloc]init];
     imgView.frame = self.view.bounds;
@@ -89,10 +78,23 @@
     textview.textColor = [UIColor redColor];
     [imgView addSubview:textview];
 }
+/*
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    VideoTranscribeVC *vc = [[VideoTranscribeVC alloc]init];
-    [self presentViewController:vc animated:YES completion:nil];
+
+
+   KLAlertController *alert = [[KLAlertController alloc]init];
+   UIView *contentView = [[UIView alloc]init];
+    contentView.kl_x = 100;
+    contentView.kl_y = 100;
+    contentView.kl_size = CGSizeMake(200, 200);
+    contentView.backgroundColor = [UIColor redColor];
+    [alert configContentView:contentView];
+    [self klPresentViewController:alert transtionStyle:(KLTranstionStyleAlert) completion:^{
+        
+    }];
+    
+    
 //    UserData *user = [[UserData alloc]init];
 //    user.name = @"张三";
 //    user.birthday = @"2019";
@@ -102,7 +104,13 @@
 //    [self test12];
 //    [self test5];
     
+//    [self selectImageClicked];
+
 }
+*/
+
+
+/*
 -(void)test12{
     KLAlertController *vc = [[KLAlertController alloc]init];
     
@@ -112,7 +120,7 @@
     [vc configContentView:self.contentView];
     
     [self presentViewController:vc animated:YES completion:nil];
-}
+}*/
 
 -(UIView *)contentView{
     if (!_contentView) {
@@ -257,7 +265,7 @@
 }
 -(void)btnaction{
     NSLog(@"间隔2秒点击");
-    [self test12];
+
 }
 #pragma makr - CAReplicatorLayer 动画
 -(void)testAnimate1{

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000E6DBE216F37CD0018779E /* UIViewController+KLTranstion.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E6DBD216F37CD0018779E /* UIViewController+KLTranstion.m */; };
+		000E6DC1216F3A7F0018779E /* KLTranstionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E6DC0216F3A7F0018779E /* KLTranstionDelegate.m */; };
+		000E6DC5216F43860018779E /* KLAnimationAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E6DC4216F43860018779E /* KLAnimationAlert.m */; };
 		00135A7520ECA9E7009B8BBF /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 00135A7420ECA9E7009B8BBF /* UserData.m */; };
 		00135A7820ECAA3B009B8BBF /* DataBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 00135A7720ECAA3B009B8BBF /* DataBaseObject.m */; };
-		001AD0012138EBFD00A5BB54 /* VideoTranscribeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 001AD0002138EBFD00A5BB54 /* VideoTranscribeVC.m */; };
-		0022B0CF20F6EF45005D68C3 /* KLBlurreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0022B0CE20F6EF45005D68C3 /* KLBlurreView.m */; };
+		00186721215259EF00F2D603 /* NSObject+KLObjectProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 00186720215259EF00F2D603 /* NSObject+KLObjectProperty.m */; };
+		002FB55021A2516F00D0C7F5 /* WaveAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FB54F21A2516F00D0C7F5 /* WaveAnimateView.m */; };
 		0031199E206CC4A400D5FC58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031199D206CC4A400D5FC58 /* AppDelegate.m */; };
 		003119A1206CC4A400D5FC58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119A0206CC4A400D5FC58 /* ViewController.m */; };
 		003119A4206CC4A400D5FC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003119A2206CC4A400D5FC58 /* Main.storyboard */; };
@@ -19,30 +22,22 @@
 		003119AC206CC4A400D5FC58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119AB206CC4A400D5FC58 /* main.m */; };
 		003119B4206CC51200D5FC58 /* UIControl+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119B3206CC51200D5FC58 /* UIControl+Category.m */; };
 		003119BA206CDF5B00D5FC58 /* UIButton+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 003119B9206CDF5B00D5FC58 /* UIButton+Layout.m */; };
+		004110EA217DCCBB0050E647 /* KLNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 004110E9217DCCBB0050E647 /* KLNetWorking.m */; };
+		004110EE217DCDB20050E647 /* KLURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 004110ED217DCDB20050E647 /* KLURLRequest.m */; };
+		004110F1217DCDF30050E647 /* KLURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 004110F0217DCDF30050E647 /* KLURLResponse.m */; };
 		0042AAE320D120F90090CEEA /* KLDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0042AAE220D120F90090CEEA /* KLDeviceModel.m */; };
 		00545E6520CE54C900064686 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 00545E6320CE54C900064686 /* UIImage+Category.m */; };
 		0066D03820C5467F00EBD1A9 /* UIView+KLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03620C5467F00EBD1A9 /* UIView+KLLayer.m */; };
 		0066D03D20C54DAC00EBD1A9 /* KLAdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03920C54DAC00EBD1A9 /* KLAdvertView.m */; };
 		0066D03E20C54DAC00EBD1A9 /* LL_AdvertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */; };
+		006CA7592154F33A00BEF3D3 /* WeChatSight4.mov in Resources */ = {isa = PBXBuildFile; fileRef = 006CA7582154F33A00BEF3D3 /* WeChatSight4.mov */; };
 		00786E6720DCF62300495592 /* KLDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00786E6520DCF62300495592 /* KLDrawView.m */; };
-		00897C38212A5DF700FC0ED4 /* KLClickAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00897C37212A5DF700FC0ED4 /* KLClickAnimateView.m */; };
 		0091A13B20F84378007E4759 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A13A20F84377007E4759 /* Accelerate.framework */; };
 		0091A14220F87E40007E4759 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A14520F87E40007E4759 /* libFMDB.a */; };
 		0091A14320F87E40007E4759 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A14620F87E40007E4759 /* libGPUImage.a */; };
 		0091A14420F87E40007E4759 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A14720F87E40007E4759 /* libSDWebImage.a */; };
-		00A5AE0C212FBB93002762AB /* KLTransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5AE0B212FBB93002762AB /* KLTransitionAnimate.m */; };
-		00A5AE0F212FBBAD002762AB /* KLAlertViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5AE0E212FBBAD002762AB /* KLAlertViewVC.m */; };
-		00AC758620CA25140000C2B0 /* localBigImage0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757C20CA25140000C2B0 /* localBigImage0.jpeg */; };
-		00AC758720CA25140000C2B0 /* localImage1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757D20CA25140000C2B0 /* localImage1.jpeg */; };
-		00AC758820CA25140000C2B0 /* localImage0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757E20CA25140000C2B0 /* localImage0.jpeg */; };
-		00AC758920CA25140000C2B0 /* localImage7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC757F20CA25140000C2B0 /* localImage7.jpeg */; };
-		00AC758A20CA25140000C2B0 /* localImage6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758020CA25140000C2B0 /* localImage6.jpeg */; };
-		00AC758B20CA25140000C2B0 /* localImage5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758120CA25140000C2B0 /* localImage5.jpeg */; };
-		00AC758C20CA25140000C2B0 /* localImage4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758220CA25140000C2B0 /* localImage4.jpeg */; };
-		00AC758D20CA25140000C2B0 /* localImage8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758320CA25140000C2B0 /* localImage8.jpeg */; };
-		00AC758E20CA25140000C2B0 /* localImage3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758420CA25140000C2B0 /* localImage3.jpeg */; };
-		00AC758F20CA25140000C2B0 /* localImage2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00AC758520CA25140000C2B0 /* localImage2.jpeg */; };
 		00BEFAD0212ED110009B5DE5 /* KLReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BEFACF212ED110009B5DE5 /* KLReflectionView.m */; };
+		00D509BF2186FED70000A7E0 /* CoreAnimateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D509BE2186FED70000A7E0 /* CoreAnimateTest.m */; };
 		00DD1AA520EA1CE10057E030 /* KLAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DD1AA420EA1CE10057E030 /* KLAlertController.m */; };
 		00F2557A20FD803C003D2E84 /* KLPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2557920FD803C003D2E84 /* KLPhotoTool.m */; };
 		00F2557C20FD809A003D2E84 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F2557B20FD809A003D2E84 /* Photos.framework */; };
@@ -51,14 +46,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000E6DBC216F37CD0018779E /* UIViewController+KLTranstion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KLTranstion.h"; sourceTree = "<group>"; };
+		000E6DBD216F37CD0018779E /* UIViewController+KLTranstion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KLTranstion.m"; sourceTree = "<group>"; };
+		000E6DBF216F3A7F0018779E /* KLTranstionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLTranstionDelegate.h; sourceTree = "<group>"; };
+		000E6DC0216F3A7F0018779E /* KLTranstionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLTranstionDelegate.m; sourceTree = "<group>"; };
+		000E6DC2216F3EDB0018779E /* KLTranstionStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLTranstionStyle.h; sourceTree = "<group>"; };
+		000E6DC3216F43860018779E /* KLAnimationAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAnimationAlert.h; sourceTree = "<group>"; };
+		000E6DC4216F43860018779E /* KLAnimationAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAnimationAlert.m; sourceTree = "<group>"; };
 		00135A7320ECA9E7009B8BBF /* UserData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
 		00135A7420ECA9E7009B8BBF /* UserData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		00135A7620ECAA3B009B8BBF /* DataBaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseObject.h; sourceTree = "<group>"; };
 		00135A7720ECAA3B009B8BBF /* DataBaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseObject.m; sourceTree = "<group>"; };
-		001ACFFF2138EBFD00A5BB54 /* VideoTranscribeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoTranscribeVC.h; sourceTree = "<group>"; };
-		001AD0002138EBFD00A5BB54 /* VideoTranscribeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoTranscribeVC.m; sourceTree = "<group>"; };
-		0022B0CD20F6EF45005D68C3 /* KLBlurreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBlurreView.h; sourceTree = "<group>"; };
-		0022B0CE20F6EF45005D68C3 /* KLBlurreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLBlurreView.m; sourceTree = "<group>"; };
+		0018671F215259EF00F2D603 /* NSObject+KLObjectProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KLObjectProperty.h"; sourceTree = "<group>"; };
+		00186720215259EF00F2D603 /* NSObject+KLObjectProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KLObjectProperty.m"; sourceTree = "<group>"; };
+		002FB54E21A2516F00D0C7F5 /* WaveAnimateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveAnimateView.h; sourceTree = "<group>"; };
+		002FB54F21A2516F00D0C7F5 /* WaveAnimateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaveAnimateView.m; sourceTree = "<group>"; };
 		00311999206CC4A400D5FC58 /* ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0031199C206CC4A400D5FC58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0031199D206CC4A400D5FC58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +75,12 @@
 		003119B3206CC51200D5FC58 /* UIControl+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Category.m"; sourceTree = "<group>"; };
 		003119B8206CDF5B00D5FC58 /* UIButton+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Layout.h"; sourceTree = "<group>"; };
 		003119B9206CDF5B00D5FC58 /* UIButton+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Layout.m"; sourceTree = "<group>"; };
+		004110E8217DCCBB0050E647 /* KLNetWorking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLNetWorking.h; sourceTree = "<group>"; };
+		004110E9217DCCBB0050E647 /* KLNetWorking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLNetWorking.m; sourceTree = "<group>"; };
+		004110EC217DCDB20050E647 /* KLURLRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLURLRequest.h; sourceTree = "<group>"; };
+		004110ED217DCDB20050E647 /* KLURLRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLURLRequest.m; sourceTree = "<group>"; };
+		004110EF217DCDF30050E647 /* KLURLResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLURLResponse.h; sourceTree = "<group>"; };
+		004110F0217DCDF30050E647 /* KLURLResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLURLResponse.m; sourceTree = "<group>"; };
 		0042AAE120D120F90090CEEA /* KLDeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLDeviceModel.h; sourceTree = "<group>"; };
 		0042AAE220D120F90090CEEA /* KLDeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLDeviceModel.m; sourceTree = "<group>"; };
 		00545E6320CE54C900064686 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
@@ -83,30 +91,17 @@
 		0066D03A20C54DAC00EBD1A9 /* KLAdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLAdvertView.h; sourceTree = "<group>"; };
 		0066D03B20C54DAC00EBD1A9 /* LL_AdvertScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LL_AdvertScrollView.h; sourceTree = "<group>"; };
 		0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LL_AdvertScrollView.m; sourceTree = "<group>"; };
+		006CA7582154F33A00BEF3D3 /* WeChatSight4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = WeChatSight4.mov; sourceTree = "<group>"; };
 		00786E6520DCF62300495592 /* KLDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDrawView.m; sourceTree = "<group>"; };
 		00786E6620DCF62300495592 /* KLDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDrawView.h; sourceTree = "<group>"; };
-		00897C36212A5DF700FC0ED4 /* KLClickAnimateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLClickAnimateView.h; sourceTree = "<group>"; };
-		00897C37212A5DF700FC0ED4 /* KLClickAnimateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLClickAnimateView.m; sourceTree = "<group>"; };
 		0091A13A20F84377007E4759 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0091A14520F87E40007E4759 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0091A14620F87E40007E4759 /* libGPUImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGPUImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0091A14720F87E40007E4759 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		00A5AE0A212FBB93002762AB /* KLTransitionAnimate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLTransitionAnimate.h; sourceTree = "<group>"; };
-		00A5AE0B212FBB93002762AB /* KLTransitionAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLTransitionAnimate.m; sourceTree = "<group>"; };
-		00A5AE0D212FBBAD002762AB /* KLAlertViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAlertViewVC.h; sourceTree = "<group>"; };
-		00A5AE0E212FBBAD002762AB /* KLAlertViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAlertViewVC.m; sourceTree = "<group>"; };
-		00AC757C20CA25140000C2B0 /* localBigImage0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localBigImage0.jpeg; sourceTree = "<group>"; };
-		00AC757D20CA25140000C2B0 /* localImage1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage1.jpeg; sourceTree = "<group>"; };
-		00AC757E20CA25140000C2B0 /* localImage0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage0.jpeg; sourceTree = "<group>"; };
-		00AC757F20CA25140000C2B0 /* localImage7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage7.jpeg; sourceTree = "<group>"; };
-		00AC758020CA25140000C2B0 /* localImage6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage6.jpeg; sourceTree = "<group>"; };
-		00AC758120CA25140000C2B0 /* localImage5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage5.jpeg; sourceTree = "<group>"; };
-		00AC758220CA25140000C2B0 /* localImage4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage4.jpeg; sourceTree = "<group>"; };
-		00AC758320CA25140000C2B0 /* localImage8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage8.jpeg; sourceTree = "<group>"; };
-		00AC758420CA25140000C2B0 /* localImage3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage3.jpeg; sourceTree = "<group>"; };
-		00AC758520CA25140000C2B0 /* localImage2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localImage2.jpeg; sourceTree = "<group>"; };
 		00BEFACE212ED110009B5DE5 /* KLReflectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLReflectionView.h; sourceTree = "<group>"; };
 		00BEFACF212ED110009B5DE5 /* KLReflectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLReflectionView.m; sourceTree = "<group>"; };
+		00D509BD2186FED70000A7E0 /* CoreAnimateTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAnimateTest.h; sourceTree = "<group>"; };
+		00D509BE2186FED70000A7E0 /* CoreAnimateTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimateTest.m; sourceTree = "<group>"; };
 		00DD1AA320EA1CE10057E030 /* KLAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAlertController.h; sourceTree = "<group>"; };
 		00DD1AA420EA1CE10057E030 /* KLAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAlertController.m; sourceTree = "<group>"; };
 		00F2557820FD803C003D2E84 /* KLPhotoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLPhotoTool.h; sourceTree = "<group>"; };
@@ -135,6 +130,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000E6DBB216F37AB0018779E /* KLTranstion */ = {
+			isa = PBXGroup;
+			children = (
+				00DD1AA320EA1CE10057E030 /* KLAlertController.h */,
+				00DD1AA420EA1CE10057E030 /* KLAlertController.m */,
+				000E6DC2216F3EDB0018779E /* KLTranstionStyle.h */,
+				000E6DBC216F37CD0018779E /* UIViewController+KLTranstion.h */,
+				000E6DBD216F37CD0018779E /* UIViewController+KLTranstion.m */,
+				000E6DBF216F3A7F0018779E /* KLTranstionDelegate.h */,
+				000E6DC0216F3A7F0018779E /* KLTranstionDelegate.m */,
+				000E6DC3216F43860018779E /* KLAnimationAlert.h */,
+				000E6DC4216F43860018779E /* KLAnimationAlert.m */,
+			);
+			path = KLTranstion;
+			sourceTree = "<group>";
+		};
 		00135A7220ECA9AA009B8BBF /* FMDBTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,8 +160,7 @@
 		001ACFFE2138EBCA00A5BB54 /* 视频录制 */ = {
 			isa = PBXGroup;
 			children = (
-				001ACFFF2138EBFD00A5BB54 /* VideoTranscribeVC.h */,
-				001AD0002138EBFD00A5BB54 /* VideoTranscribeVC.m */,
+				006CA7582154F33A00BEF3D3 /* WeChatSight4.mov */,
 			);
 			path = "视频录制";
 			sourceTree = "<group>";
@@ -176,20 +186,16 @@
 		0031199B206CC4A400D5FC58 /* ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				00D509BC2186FEB40000A7E0 /* CoreAnimate */,
 				001ACFFE2138EBCA00A5BB54 /* 视频录制 */,
-				00A5AE09212FBB5C002762AB /* KLCustomAlertView */,
 				00A5AE08212F9D30002762AB /* Navigation */,
 				00F2557D20FDCC14003D2E84 /* KLImage.bundle */,
 				00786E6620DCF62300495592 /* KLDrawView.h */,
 				00786E6520DCF62300495592 /* KLDrawView.m */,
 				0031199C206CC4A400D5FC58 /* AppDelegate.h */,
 				0031199D206CC4A400D5FC58 /* AppDelegate.m */,
-				0022B0CD20F6EF45005D68C3 /* KLBlurreView.h */,
-				0022B0CE20F6EF45005D68C3 /* KLBlurreView.m */,
 				0031199F206CC4A400D5FC58 /* ViewController.h */,
 				003119A0206CC4A400D5FC58 /* ViewController.m */,
-				00DD1AA320EA1CE10057E030 /* KLAlertController.h */,
-				00DD1AA420EA1CE10057E030 /* KLAlertController.m */,
 				0066D03720C5467F00EBD1A9 /* UIView+KLLayer.h */,
 				0066D03620C5467F00EBD1A9 /* UIView+KLLayer.m */,
 				003119B2206CC51200D5FC58 /* UIControl+Category.h */,
@@ -204,10 +210,12 @@
 				00545E6320CE54C900064686 /* UIImage+Category.m */,
 				0042AAE120D120F90090CEEA /* KLDeviceModel.h */,
 				0042AAE220D120F90090CEEA /* KLDeviceModel.m */,
-				00897C36212A5DF700FC0ED4 /* KLClickAnimateView.h */,
-				00897C37212A5DF700FC0ED4 /* KLClickAnimateView.m */,
 				00BEFACE212ED110009B5DE5 /* KLReflectionView.h */,
 				00BEFACF212ED110009B5DE5 /* KLReflectionView.m */,
+				0018671F215259EF00F2D603 /* NSObject+KLObjectProperty.h */,
+				00186720215259EF00F2D603 /* NSObject+KLObjectProperty.m */,
+				004110EB217DCD470050E647 /* KLNetWorking */,
+				000E6DBB216F37AB0018779E /* KLTranstion */,
 				00F2557720FD7FE6003D2E84 /* PHPhotoTool */,
 				00135A7220ECA9AA009B8BBF /* FMDBTools */,
 				003119A2206CC4A400D5FC58 /* Main.storyboard */,
@@ -215,9 +223,21 @@
 				003119A7206CC4A400D5FC58 /* LaunchScreen.storyboard */,
 				003119AA206CC4A400D5FC58 /* Info.plist */,
 				003119AB206CC4A400D5FC58 /* main.m */,
-				00AC757B20CA25140000C2B0 /* LocalImages */,
 			);
 			path = ToolDemo;
+			sourceTree = "<group>";
+		};
+		004110EB217DCD470050E647 /* KLNetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				004110E8217DCCBB0050E647 /* KLNetWorking.h */,
+				004110E9217DCCBB0050E647 /* KLNetWorking.m */,
+				004110EC217DCDB20050E647 /* KLURLRequest.h */,
+				004110ED217DCDB20050E647 /* KLURLRequest.m */,
+				004110EF217DCDF30050E647 /* KLURLResponse.h */,
+				004110F0217DCDF30050E647 /* KLURLResponse.m */,
+			);
+			path = KLNetWorking;
 			sourceTree = "<group>";
 		};
 		00A5AE08212F9D30002762AB /* Navigation */ = {
@@ -227,32 +247,15 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		00A5AE09212FBB5C002762AB /* KLCustomAlertView */ = {
+		00D509BC2186FEB40000A7E0 /* CoreAnimate */ = {
 			isa = PBXGroup;
 			children = (
-				00A5AE0A212FBB93002762AB /* KLTransitionAnimate.h */,
-				00A5AE0B212FBB93002762AB /* KLTransitionAnimate.m */,
-				00A5AE0D212FBBAD002762AB /* KLAlertViewVC.h */,
-				00A5AE0E212FBBAD002762AB /* KLAlertViewVC.m */,
+				00D509BD2186FED70000A7E0 /* CoreAnimateTest.h */,
+				00D509BE2186FED70000A7E0 /* CoreAnimateTest.m */,
+				002FB54E21A2516F00D0C7F5 /* WaveAnimateView.h */,
+				002FB54F21A2516F00D0C7F5 /* WaveAnimateView.m */,
 			);
-			path = KLCustomAlertView;
-			sourceTree = "<group>";
-		};
-		00AC757B20CA25140000C2B0 /* LocalImages */ = {
-			isa = PBXGroup;
-			children = (
-				00AC757C20CA25140000C2B0 /* localBigImage0.jpeg */,
-				00AC757D20CA25140000C2B0 /* localImage1.jpeg */,
-				00AC757E20CA25140000C2B0 /* localImage0.jpeg */,
-				00AC757F20CA25140000C2B0 /* localImage7.jpeg */,
-				00AC758020CA25140000C2B0 /* localImage6.jpeg */,
-				00AC758120CA25140000C2B0 /* localImage5.jpeg */,
-				00AC758220CA25140000C2B0 /* localImage4.jpeg */,
-				00AC758320CA25140000C2B0 /* localImage8.jpeg */,
-				00AC758420CA25140000C2B0 /* localImage3.jpeg */,
-				00AC758520CA25140000C2B0 /* localImage2.jpeg */,
-			);
-			path = LocalImages;
+			path = CoreAnimate;
 			sourceTree = "<group>";
 		};
 		00F2557720FD7FE6003D2E84 /* PHPhotoTool */ = {
@@ -347,19 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				003119A9206CC4A400D5FC58 /* LaunchScreen.storyboard in Resources */,
-				00AC758620CA25140000C2B0 /* localBigImage0.jpeg in Resources */,
-				00AC758820CA25140000C2B0 /* localImage0.jpeg in Resources */,
-				00AC758B20CA25140000C2B0 /* localImage5.jpeg in Resources */,
-				00AC758F20CA25140000C2B0 /* localImage2.jpeg in Resources */,
 				003119A6206CC4A400D5FC58 /* Assets.xcassets in Resources */,
-				00AC758A20CA25140000C2B0 /* localImage6.jpeg in Resources */,
-				00AC758920CA25140000C2B0 /* localImage7.jpeg in Resources */,
-				00AC758D20CA25140000C2B0 /* localImage8.jpeg in Resources */,
 				00F2557E20FDCC14003D2E84 /* KLImage.bundle in Resources */,
-				00AC758E20CA25140000C2B0 /* localImage3.jpeg in Resources */,
+				006CA7592154F33A00BEF3D3 /* WeChatSight4.mov in Resources */,
 				003119A4206CC4A400D5FC58 /* Main.storyboard in Resources */,
-				00AC758C20CA25140000C2B0 /* localImage4.jpeg in Resources */,
-				00AC758720CA25140000C2B0 /* localImage1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,25 +413,29 @@
 			files = (
 				00135A7520ECA9E7009B8BBF /* UserData.m in Sources */,
 				00BEFAD0212ED110009B5DE5 /* KLReflectionView.m in Sources */,
-				0022B0CF20F6EF45005D68C3 /* KLBlurreView.m in Sources */,
 				0066D03D20C54DAC00EBD1A9 /* KLAdvertView.m in Sources */,
+				000E6DC1216F3A7F0018779E /* KLTranstionDelegate.m in Sources */,
 				0042AAE320D120F90090CEEA /* KLDeviceModel.m in Sources */,
 				003119A1206CC4A400D5FC58 /* ViewController.m in Sources */,
+				00186721215259EF00F2D603 /* NSObject+KLObjectProperty.m in Sources */,
+				002FB55021A2516F00D0C7F5 /* WaveAnimateView.m in Sources */,
 				003119AC206CC4A400D5FC58 /* main.m in Sources */,
+				000E6DBE216F37CD0018779E /* UIViewController+KLTranstion.m in Sources */,
 				00135A7820ECAA3B009B8BBF /* DataBaseObject.m in Sources */,
+				004110F1217DCDF30050E647 /* KLURLResponse.m in Sources */,
 				0031199E206CC4A400D5FC58 /* AppDelegate.m in Sources */,
+				000E6DC5216F43860018779E /* KLAnimationAlert.m in Sources */,
 				0066D03820C5467F00EBD1A9 /* UIView+KLLayer.m in Sources */,
 				00DD1AA520EA1CE10057E030 /* KLAlertController.m in Sources */,
+				004110EA217DCCBB0050E647 /* KLNetWorking.m in Sources */,
 				003119BA206CDF5B00D5FC58 /* UIButton+Layout.m in Sources */,
-				001AD0012138EBFD00A5BB54 /* VideoTranscribeVC.m in Sources */,
 				003119B4206CC51200D5FC58 /* UIControl+Category.m in Sources */,
-				00897C38212A5DF700FC0ED4 /* KLClickAnimateView.m in Sources */,
-				00A5AE0C212FBB93002762AB /* KLTransitionAnimate.m in Sources */,
 				00F2557A20FD803C003D2E84 /* KLPhotoTool.m in Sources */,
 				0066D03E20C54DAC00EBD1A9 /* LL_AdvertScrollView.m in Sources */,
+				00D509BF2186FED70000A7E0 /* CoreAnimateTest.m in Sources */,
 				00786E6720DCF62300495592 /* KLDrawView.m in Sources */,
+				004110EE217DCDB20050E647 /* KLURLRequest.m in Sources */,
 				00545E6520CE54C900064686 /* UIImage+Category.m in Sources */,
-				00A5AE0F212FBBAD002762AB /* KLAlertViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

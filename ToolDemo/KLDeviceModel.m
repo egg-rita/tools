@@ -8,14 +8,13 @@
 
 #import "KLDeviceModel.h"
 #import <sys/utsname.h>
-
 @implementation KLDeviceModel
 //苹果手机检测
 +(NSString*)iphoneType{
     struct utsname systemInfo;
     uname(&systemInfo);
    NSString *deviceModel = [NSString stringWithCString:systemInfo.machine encoding:(NSUTF8StringEncoding)];
-    
+    if ([deviceModel isEqualToString:@"x86_64"]||[deviceModel isEqualToString:@"i386"]) {return @"Device_Simulator";}
     //iPhone 系列
 //    if ([deviceModel isEqualToString:@"iPhone1,1"]) { return @"iPhone 1G";}
 //    else if ([deviceModel isEqualToString:@"iPhone1,2"]) {return @"iPhone 3G";}
@@ -24,7 +23,7 @@
 //    else if ([deviceModel isEqualToString:@"iPhone3,2"])    {return @"Verizon iPhone 4";}
 //    else if ([deviceModel isEqualToString:@"iPhone4,1"])    {return @"iPhone 4S";}
 //    else if ([deviceModel isEqualToString:@"iPhone5,1"])    {return @"iPhone 5";}
-    if ([deviceModel isEqualToString:@"iPhone5,2"])    {return @"iPhone 5";}
+    else if ([deviceModel isEqualToString:@"iPhone5,2"])    {return @"iPhone 5";}
 //    else if ([deviceModel isEqualToString:@"iPhone5,3"])    {return @"iPhone 5C";}
 //    else if ([deviceModel isEqualToString:@"iPhone5,4"])    {return @"iPhone 5C";}
     else if ([deviceModel isEqualToString:@"iPhone6,1"])    {return @"iPhone 5S";}
