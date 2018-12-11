@@ -14,7 +14,7 @@
 #import "UIImage+Category.h"
 #import "KLDrawView.h"
 #import "KLAlertController.h"
-
+#import "KLDeviceModel.h"
 #import "UserData.h"
 #import <GPUImage.h>
 #import <UIImageView+WebCache.h>
@@ -40,8 +40,9 @@
 //    CoreAnimateTest *coreAnimate = [[CoreAnimateTest alloc]initWithFrame:self.view.bounds];
 //    [self.view addSubview:coreAnimate];
     
-    WaveAnimateView *waveView = [[WaveAnimateView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 50)];
-    [self.view addSubview:waveView];
+//    WaveAnimateView *waveView = [[WaveAnimateView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 50)];
+//    [self.view addSubview:waveView];
+   
 }
 
 

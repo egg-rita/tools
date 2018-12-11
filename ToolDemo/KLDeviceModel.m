@@ -9,6 +9,17 @@
 #import "KLDeviceModel.h"
 #import <sys/utsname.h>
 @implementation KLDeviceModel
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSLog(@"[self class] ==> %@",[self class]);
+        NSLog(@"[super class] ==> %@",[super class]);
+        NSLog(@"[self superclass] ==> %@",[self superclass]);
+        NSLog(@"[super superclass] ==> %@",[super superclass]);
+    }
+    return self;
+}
 //苹果手机检测
 +(NSString*)iphoneType{
     struct utsname systemInfo;
