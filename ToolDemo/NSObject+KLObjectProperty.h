@@ -9,9 +9,23 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (KLObjectProperty)
-//获取指定类的所有属性
-+(void)klGetObjectPropertyListWithClass:(Class)klClass;
+/**
+ 获取成员变量
+ */
++(NSArray*)klGetFetchIvarList;
 
-//获取指定类的所有的类的方法
-+(void)klGetObjectMethodListWithClass:(Class)klClass;
+/**
+ 获取类的属性列表，包括私有和公有属性，以及定义在Extension中的属性
+ */
++(NSArray*)klGetFetchPropertyList;
+
+/**
+ 获取协议列表
+ */
++(NSArray*)klGetProtocolList;
+
+/**
+ 获取类的实力方法列表 getter setter，对象方法等。
+ */
++(NSArray*)klGetInstanceMethodList;
 @end

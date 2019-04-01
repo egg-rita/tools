@@ -30,7 +30,6 @@
 		0066D03820C5467F00EBD1A9 /* UIView+KLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03620C5467F00EBD1A9 /* UIView+KLLayer.m */; };
 		0066D03D20C54DAC00EBD1A9 /* KLAdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03920C54DAC00EBD1A9 /* KLAdvertView.m */; };
 		0066D03E20C54DAC00EBD1A9 /* LL_AdvertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */; };
-		006CA7592154F33A00BEF3D3 /* WeChatSight4.mov in Resources */ = {isa = PBXBuildFile; fileRef = 006CA7582154F33A00BEF3D3 /* WeChatSight4.mov */; };
 		00786E6720DCF62300495592 /* KLDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00786E6520DCF62300495592 /* KLDrawView.m */; };
 		0091A13B20F84378007E4759 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A13A20F84377007E4759 /* Accelerate.framework */; };
 		0091A14220F87E40007E4759 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091A14520F87E40007E4759 /* libFMDB.a */; };
@@ -42,8 +41,19 @@
 		00F2557A20FD803C003D2E84 /* KLPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F2557920FD803C003D2E84 /* KLPhotoTool.m */; };
 		00F2557C20FD809A003D2E84 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F2557B20FD809A003D2E84 /* Photos.framework */; };
 		00F2557E20FDCC14003D2E84 /* KLImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00F2557D20FDCC14003D2E84 /* KLImage.bundle */; };
+		7439F27E2238A12B00E1B41D /* ToolDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7439F27D2238A12B00E1B41D /* ToolDemoTests.m */; };
 		B695C5DA2C2CDC2351C65917 /* libPods-ToolDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2080334BA0FF7607229973 /* libPods-ToolDemo.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7439F2802238A12B00E1B41D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00311991206CC4A400D5FC58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00311998206CC4A400D5FC58;
+			remoteInfo = ToolDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		000E6DBC216F37CD0018779E /* UIViewController+KLTranstion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KLTranstion.h"; sourceTree = "<group>"; };
@@ -91,7 +101,6 @@
 		0066D03A20C54DAC00EBD1A9 /* KLAdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLAdvertView.h; sourceTree = "<group>"; };
 		0066D03B20C54DAC00EBD1A9 /* LL_AdvertScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LL_AdvertScrollView.h; sourceTree = "<group>"; };
 		0066D03C20C54DAC00EBD1A9 /* LL_AdvertScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LL_AdvertScrollView.m; sourceTree = "<group>"; };
-		006CA7582154F33A00BEF3D3 /* WeChatSight4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = WeChatSight4.mov; sourceTree = "<group>"; };
 		00786E6520DCF62300495592 /* KLDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDrawView.m; sourceTree = "<group>"; };
 		00786E6620DCF62300495592 /* KLDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDrawView.h; sourceTree = "<group>"; };
 		0091A13A20F84377007E4759 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -109,6 +118,9 @@
 		00F2557B20FD809A003D2E84 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		00F2557D20FDCC14003D2E84 /* KLImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KLImage.bundle; sourceTree = "<group>"; };
 		5BD7D31BFCAD4BE79A5FC57F /* Pods-ToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolDemo/Pods-ToolDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7439F27B2238A12B00E1B41D /* ToolDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7439F27D2238A12B00E1B41D /* ToolDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolDemoTests.m; sourceTree = "<group>"; };
+		7439F27F2238A12B00E1B41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF2080334BA0FF7607229973 /* libPods-ToolDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToolDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACA40E76ECA94BDFD397464 /* Pods-ToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolDemo/Pods-ToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +136,13 @@
 				0091A14420F87E40007E4759 /* libSDWebImage.a in Frameworks */,
 				0091A13B20F84378007E4759 /* Accelerate.framework in Frameworks */,
 				B695C5DA2C2CDC2351C65917 /* libPods-ToolDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7439F2782238A12B00E1B41D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,18 +176,11 @@
 			path = FMDBTools;
 			sourceTree = "<group>";
 		};
-		001ACFFE2138EBCA00A5BB54 /* 视频录制 */ = {
-			isa = PBXGroup;
-			children = (
-				006CA7582154F33A00BEF3D3 /* WeChatSight4.mov */,
-			);
-			path = "视频录制";
-			sourceTree = "<group>";
-		};
 		00311990206CC4A400D5FC58 = {
 			isa = PBXGroup;
 			children = (
 				0031199B206CC4A400D5FC58 /* ToolDemo */,
+				7439F27C2238A12B00E1B41D /* ToolDemoTests */,
 				0031199A206CC4A400D5FC58 /* Products */,
 				08B35164274769DCD689297A /* Pods */,
 				D63ABB344F002F797A424814 /* Frameworks */,
@@ -179,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				00311999206CC4A400D5FC58 /* ToolDemo.app */,
+				7439F27B2238A12B00E1B41D /* ToolDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				00D509BC2186FEB40000A7E0 /* CoreAnimate */,
-				001ACFFE2138EBCA00A5BB54 /* 视频录制 */,
 				00A5AE08212F9D30002762AB /* Navigation */,
 				00F2557D20FDCC14003D2E84 /* KLImage.bundle */,
 				00786E6620DCF62300495592 /* KLDrawView.h */,
@@ -276,6 +288,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7439F27C2238A12B00E1B41D /* ToolDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7439F27D2238A12B00E1B41D /* ToolDemoTests.m */,
+				7439F27F2238A12B00E1B41D /* Info.plist */,
+			);
+			path = ToolDemoTests;
+			sourceTree = "<group>";
+		};
 		D63ABB344F002F797A424814 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,18 +332,42 @@
 			productReference = 00311999206CC4A400D5FC58 /* ToolDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7439F27A2238A12B00E1B41D /* ToolDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7439F2842238A12B00E1B41D /* Build configuration list for PBXNativeTarget "ToolDemoTests" */;
+			buildPhases = (
+				7439F2772238A12B00E1B41D /* Sources */,
+				7439F2782238A12B00E1B41D /* Frameworks */,
+				7439F2792238A12B00E1B41D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7439F2812238A12B00E1B41D /* PBXTargetDependency */,
+			);
+			name = ToolDemoTests;
+			productName = ToolDemoTests;
+			productReference = 7439F27B2238A12B00E1B41D /* ToolDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		00311991206CC4A400D5FC58 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "赵凯乐";
 				TargetAttributes = {
 					00311998206CC4A400D5FC58 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					7439F27A2238A12B00E1B41D = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 00311998206CC4A400D5FC58;
 					};
 				};
 			};
@@ -340,6 +385,7 @@
 			projectRoot = "";
 			targets = (
 				00311998206CC4A400D5FC58 /* ToolDemo */,
+				7439F27A2238A12B00E1B41D /* ToolDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,8 +398,14 @@
 				003119A9206CC4A400D5FC58 /* LaunchScreen.storyboard in Resources */,
 				003119A6206CC4A400D5FC58 /* Assets.xcassets in Resources */,
 				00F2557E20FDCC14003D2E84 /* KLImage.bundle in Resources */,
-				006CA7592154F33A00BEF3D3 /* WeChatSight4.mov in Resources */,
 				003119A4206CC4A400D5FC58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7439F2792238A12B00E1B41D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +491,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7439F2772238A12B00E1B41D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7439F27E2238A12B00E1B41D /* ToolDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7439F2812238A12B00E1B41D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00311998206CC4A400D5FC58 /* ToolDemo */;
+			targetProxy = 7439F2802238A12B00E1B41D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		003119A2206CC4A400D5FC58 /* Main.storyboard */ = {
@@ -597,6 +665,45 @@
 			};
 			name = Release;
 		};
+		7439F2822238A12B00E1B41D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ToolDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = zkl.ToolDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToolDemo.app/ToolDemo";
+			};
+			name = Debug;
+		};
+		7439F2832238A12B00E1B41D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ToolDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = zkl.ToolDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToolDemo.app/ToolDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -614,6 +721,15 @@
 			buildConfigurations = (
 				003119B0206CC4A400D5FC58 /* Debug */,
 				003119B1206CC4A400D5FC58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7439F2842238A12B00E1B41D /* Build configuration list for PBXNativeTarget "ToolDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7439F2822238A12B00E1B41D /* Debug */,
+				7439F2832238A12B00E1B41D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

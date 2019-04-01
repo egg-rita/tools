@@ -9,6 +9,7 @@
 #import "UIView+KLLayer.h"
 
 @implementation UIView (KLLayer)
+
 #pragma mark -
 -(void)setKl_x:(CGFloat)kl_x{
     CGRect rect = self.frame;
@@ -104,62 +105,28 @@
     self.layer.borderColor = color.CGColor;
 }
 
-/**
- 阴影
- @param offsize
- @param radius
- @param color
- @param opacity [0,1]
- */
--(void)kl_systemShadowWithOffset:(CGSize)offsize
-                       andRadius:(CGFloat)radius
-                        andColor:(UIColor*)color
-                      andopacity:(CGFloat)opacity{
+#pragma mark - 阴影
+-(void)kl_customFastSquareShadowWithColor:(UIColor*)color andShadowOpacity:(float)opacity{
+    color = color == nil? [UIColor blackColor]:color;
+    [self kl_customSquareShadowWithColor:color andShadowOpacity:opacity andcornerRadius:self.layer.cornerRadius andShadowRadius:3];
+}
+-(void)kl_customSquareShadowWithColor:(UIColor*)color andShadowOpacity:(float)opacity andcornerRadius:(CGFloat)r andShadowRadius:(CGFloat)radius{
     
-    self.layer.shadowOffset = offsize;//偏移
-    self.layer.shadowRadius = radius;//半径
-    self.layer.shadowColor = color.CGColor;//颜色
-    self.layer.shadowOpacity = opacity;//不透明度
+    r = r<0? 0:r;
+    color = color == nil? [UIColor blackColor]:color;
+    radius = radius<0? 0:radius;
+    CGSize size = self.bounds.size;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(-radius*0.5, -radius*0.5, size.width+radius  , size.height+radius) cornerRadius:r];
+    [self kl_customShadowWithSize:CGSizeZero andPath:path andShadowColor:color andShadowOpacity:opacity];
 }
-/**
- 裁边+描边
- */
--(void)kl_cornerRadiusWithRadius:(CGFloat)radius andLineWidth:(CGFloat)lineWidth andLineColor:(UIColor*)color{
-    
-    //裁边
-    [self kl_cuttingWithRadius:radius];
-    //描边
-    [self kl_borderWithRadius:radius andLineWidth:lineWidth*2 andStrokeColor:color];
-    
-}
-//描边、边框
--(void)kl_borderWithRadius:(CGFloat)radius andLineWidth:(CGFloat)lineWidth andStrokeColor:(UIColor*)strokeColor{
-
-    [self.layer addSublayer:[self kl_borderLayerWithRadius:radius andLineWidth:lineWidth andStrokeColor:strokeColor]];
-}
--(CAShapeLayer*)kl_borderLayerWithRadius:(CGFloat)radius andLineWidth:(CGFloat)lineWidth andStrokeColor:(UIColor*)strokeColor{
-    UIBezierPath * borderPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:radius];
-    CAShapeLayer *borderLayer = [CAShapeLayer layer];
-    borderLayer.path = borderPath.CGPath;
-    borderLayer.lineWidth = lineWidth;
-    borderLayer.strokeColor = strokeColor.CGColor;
-    borderLayer.fillColor = [UIColor clearColor].CGColor;
-    return borderLayer;
-}
-//裁边
--(void)kl_cuttingWithRadius:(CGFloat)radius{
-    //裁边
-    self.layer.mask = [self kl_cuttLayerWithRadius:radius];
-}
-
--(CAShapeLayer*)kl_cuttLayerWithRadius:(CGFloat)radius{
-    //裁边
-    UIBezierPath *cuttPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:radius];
-    
-    CAShapeLayer *cuttLayer = [CAShapeLayer layer];
-    cuttLayer.path = cuttPath.CGPath;
-    cuttLayer.strokeColor = [UIColor clearColor].CGColor;
-    return cuttLayer;
+-(void)kl_customShadowWithSize:(CGSize)size
+                       andPath:(UIBezierPath*)path
+                andShadowColor:(UIColor*)color
+              andShadowOpacity:(float)opacity{
+    self.layer.shadowOffset = size;
+    self.layer.shadowColor = color.CGColor;
+    self.layer.shadowOpacity = opacity;
+    self.layer.shadowPath = path.CGPath;
 }
 
 

@@ -31,32 +31,37 @@
  系统画框的方法
  */
 -(void)kl_systemCornerRadius:(CGFloat)radius andLineWidth:(CGFloat)lineWidth andLineColor:(UIColor*)color;
-/**
- 阴影
- @param offsize
- @param radius
- @param color
- @param opacity [0,1]
- */
--(void)kl_systemShadowWithOffset:(CGSize)offsize
-                       andRadius:(CGFloat)radius
-                        andColor:(UIColor*)color
-                      andopacity:(CGFloat)opacity;
-/**
-    裁边+边框
- @param radius 圆角半径
- @param lineWidth 线宽
- @param color 描边的颜色
- */
--(void)kl_cornerRadiusWithRadius:(CGFloat)radius andLineWidth:(CGFloat)lineWidth andLineColor:(UIColor*)color;
 
-//裁边、
--(void)kl_cuttingWithRadius:(CGFloat)radius;
--(CAShapeLayer*)kl_cuttLayerWithRadius:(CGFloat)radius;
+#pragma mark - 阴影
 
-//描边、边框
--(void)kl_borderWithRadius:(CGFloat)radius andLineWidth:(CGFloat)lineWidth andStrokeColor:(UIColor*)strokeColor;
--(CAShapeLayer*)kl_borderLayerWithRadius:(CGFloat)radius andLineWidth:(CGFloat)lineWidth andStrokeColor:(UIColor*)strokeColor;
+/**
+ 根据view的形状构建一个相应的阴影形状(方形)
+ @param color 阴影的颜色
+ @param opacity 阴影的透明度
+ */
+-(void)kl_customFastSquareShadowWithColor:(UIColor*)color andShadowOpacity:(float)opacity;
+/**
+ 自定义路径阴影(自定义程度较高)
+ @param color 阴影颜色
+ @param opacity 阴影透明度(0~1.0)
+ @param r 阴影的圆角半径
+ @param radius 阴影的扩散半径
+ */
+-(void)kl_customSquareShadowWithColor:(UIColor*)color andShadowOpacity:(float)opacity andcornerRadius:(CGFloat)r andShadowRadius:(CGFloat)radius;
+
+
+/**
+ 自定义阴影路径(基础方法)
+
+ @param size <#size description#>
+ @param path <#path description#>
+ @param color <#color description#>
+ @param opacity <#opacity description#>
+ */
+-(void)kl_customShadowWithSize:(CGSize)size
+                       andPath:(UIBezierPath*)path
+                andShadowColor:(UIColor*)color
+              andShadowOpacity:(float)opacity;
 
 #pragma mark - 毛玻璃
 -(void)kl_galssEffectWithStyle:(UIBlurEffectStyle)style;

@@ -16,18 +16,18 @@
 
 -(instancetype)init{
     if (self = [super init]) {
+        [self confingUI];
     }
     return self;
 }
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        
+        [self confingUI];
     }
     return self;
 }
 -(void)layoutSubviews{
     [super layoutSubviews];
-    [self confingUI];
 }
 -(void)confingUI{
     CAReplicatorLayer * replayer = (CAReplicatorLayer*)self.layer;
@@ -55,7 +55,9 @@
 //    replayer.instanceBlueOffset -= 0.5;
     replayer.instanceAlphaOffset -= 0.5;
 }
-
+-(void)drawRect:(CGRect)rect{
+    
+}
 -(void)awakeFromNib{
     [super awakeFromNib];
     [self confingUI];

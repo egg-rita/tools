@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CoreAnimateTest : UIView
-
+-(void)maskLayerTest;
 @end

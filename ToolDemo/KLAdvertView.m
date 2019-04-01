@@ -25,18 +25,9 @@
     }
     return self;
 }
-//-(instancetype)initWithFrame:(CGRect)frame{
-//    if (self = [super initWithFrame:frame]) {
-//        [self createInitData];
-//        [self createUI];
-//        self.clipsToBounds = YES;
-//    }
-//    return self;
-//}
+
 -(void)createInitData{
-//    self.linkTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(startUpdateUI)];
-//    self.linkTimer.frameInterval = 120;
-//    [self.linkTimer addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+
     NSTimer *timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(startUpdateUI) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
@@ -44,16 +35,10 @@
     [self addSubview:self.firstView];
     [self addSubview:self.secondView];
 }
-//-(void)layoutSubviews{
-//    [self layoutSubviews];
-//    self.firstLab.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
-//    self.secondLab.frame = CGRectMake(0, self.bounds.size.height, self.bounds.size.width, self.bounds.size.height);
-//}
+
 
 -(void)startUpdateUI{
-//    if (self.dataSource.count <= 0) {
-//        return;
-//    }
+
     CGRect oneRect = self.firstView.frame;
     CGRect twoRect = self.secondView.frame;
     

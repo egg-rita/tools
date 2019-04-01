@@ -14,7 +14,7 @@
 
 @implementation UIControl (Category)
 + (void)load{
-    
+//    NSLog(@"--UIControl load--");
     Method systemMethod = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
     
     SEL sysSEL = @selector(sendAction:to:forEvent:);

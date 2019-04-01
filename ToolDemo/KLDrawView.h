@@ -16,7 +16,10 @@
 @end
 
 typedef void(^GetImageBlock)(UIImage *image);
+
 @interface KLDrawView : UIView
+
+
 
 @property(nonatomic,assign)CGFloat linewidth;//线宽
 @property(nonatomic,assign)UIColor *linecolor;//线条的颜色
@@ -25,6 +28,7 @@ typedef void(^GetImageBlock)(UIImage *image);
 @property(nonatomic,strong)NSMutableArray *pathArr;
 
 @property(nonatomic,assign)BOOL isDraw;//是否在此视图上画画
+
 @property(nonatomic,copy)void (^DrawBlock)();
 
 //获取一张图片
